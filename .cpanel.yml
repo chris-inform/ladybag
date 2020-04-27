@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/zc32rij4x7ro/public_html/
+    - export DEPLOYPATH=/home/zc32rij4x7ro/public_html/staging.ladybagmnl.com/
     - /bin/cp -R * $DEPLOYPATH
