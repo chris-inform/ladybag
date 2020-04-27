@@ -40,6 +40,9 @@
         "patches": {
             "drupal/core": {
                 "View output is not used for entityreference options" : "https://www.drupal.org/files/issues/2019-10-14/2174633-351.patch"
+            },
+            "drupal/commerce_paypal": {
+                "Display an error message if the site is not eligible for custom card fields" : "https://www.drupal.org/files/issues/2019-09-24/commerce_paypal-3083314-2.patch"
             }
         },
         "drupal-scaffold": {
