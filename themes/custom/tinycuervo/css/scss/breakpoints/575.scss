@@ -1,0 +1,66 @@
+#bestsellers-section {
+	padding: 0;
+	background: rgb(161,181,182);
+	background: linear-gradient(180deg, rgba(161,181,182,1) 0%, rgba(161,181,182,1) 85%, rgba(243,243,243,1) 85%, rgba(243,243,243,1) 100%);
+	.left {
+		> div {
+			padding: 0;
+		}
+	}
+	.right {
+		.slick__arrow {
+			margin-left: 0;
+			text-align: right;
+			margin-right: 1em;
+		}
+		.inner {
+			padding: 2em 0 0;
+			.slick-list {
+				padding-left: 0 !important;
+			}
+		}
+	}
+}
+#our-products-section {
+	padding-bottom: 6em;
+	.views-field-nothing {
+		max-width: 22.22em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+#our-clients-section {
+	.slick__arrow {
+		display: none;
+	}
+	.views-element-container {
+    	padding-left: 2em;
+    	padding-right: 2em;
+	}
+}
+.product-page {
+	background-color: $color-lightgray;
+	padding-bottom: 1em;
+	.site-container {
+		margin-left: 1em;
+		margin-right: 1em;
+		padding: 1.5em;
+	}
+	#views-exposed-form-products-page-page-1 {
+		margin-bottom: 1.5em;
+		border: 1px solid $color-charcoal;
+		width: 100%;
+		padding: .25em 0;
+		label {
+			border-right: 1px solid $color-charcoal;
+			display: inline-block;
+			width: 38%;
+			margin-right: 0;
+		}
+		select {
+			border: none;
+			display: inline-block;
+			width: 62%;
+		}
+	}
+}

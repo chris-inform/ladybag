@@ -1,0 +1,11 @@
+--- lib/Drupal/Core/Entity/Element/EntityAutocomplete.php
++++ lib/Drupal/Core/Entity/Element/EntityAutocomplete.php
+@@ -296,7 +296,7 @@ protected static function matchEntityByTitle(SelectionInterface $handler, $input
+         $multiples[] = $name . ' (' . $id . ')';
+       }
+       $params['@id'] = $id;
+-      $form_state->setError($element, t('Multiple entities match this reference; "%multiple". Specify the one you want by appending the id in parentheses, like "@value (@id)".', ['%multiple' => implode('", "', $multiples)] + $params));
++      $form_state->setError($element, t('Multiple entities match this reference; "%multiple". Specify the one you want by appending the id in parentheses, like "@value (@id)".', ['%multiple' => strip_tags(implode('", "', $multiples))] + $params));
+     }
+     else {
+       // Take the one and only matching entity.

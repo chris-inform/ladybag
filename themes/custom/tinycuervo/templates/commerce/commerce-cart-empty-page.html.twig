@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ *
+ * Empty cart page template.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="cart-empty-page">
+	<div class="cart-icon">
+		<img src="{{ base_path ~ directory }}/images/ico_cart.svg" alt="Cart Icon" />
+	</div>
+	<div class="desc">
+	  	{{ 'Your cart is empty.'|t }}
+	</div>
+  	<div class="cta">
+  		<a href="{{ url('<front>') }}shop" class="btn btn-secondary">Continue Shopping</a>
+  	</div>
+</div>

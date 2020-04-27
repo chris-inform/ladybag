@@ -1,0 +1,93 @@
+<div class="layout-container">
+
+  <header id="header" role="banner" class="home">
+    <div class="site-container h-100">
+      <div class="row h-100">
+        <div class="col-4 align-self-center">
+          <div id="mobile-burg-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          {{page.header_left}}
+        </div>
+        <div class="col-4 align-self-center">
+          {{page.header_mid}}
+        </div>
+        <div class="col-4 align-self-center">
+          {{page.header_right}}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div id="mobile-sidebar">
+      <span>Menu</span>
+      {{ drupal_menu('mobile', 1, 3) }}
+    </div>
+    <div class="layout-content">
+        {#{ page.content }#}
+      <div class="site-container">
+        <div id="banner">
+          {{ drupal_view('banner', 'block_1') }}
+        </div>
+        <div class="every-woman">
+          It's every woman's evening <strong>essential.</strong>
+        </div>
+      </div>
+      <div class="mutedmoss-section">
+        <div id="about_us" class="about-section">
+          <h2>{{ 'Hello'|t }}</h2>
+          {{ drupal_entity('block_content', '2') }}
+        </div>
+        {# Bestseller block #}
+        <div id="bestsellers-section">
+          <div class="row">
+            <div class="col-lg-4 col-sm-4 left align-self-center">
+              {{ drupal_entity('block_content', '3') }}
+            </div>
+            <div class="col-lg-8 col-sm-8 right align-self-center">
+              <div class="inner">
+                <h4>{{ 'Our Bestsellers'|t }}</h4>
+                {{ drupal_view('bestsellers', 'block_1') }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-section"></div>
+      </div>
+      <div id="our-products-section">
+        <h4>{{ 'Our Products'|t }}</h4>
+        {{ drupal_view('product_terms_home', 'block_1') }}
+      </div>
+      <div id="our-clients-section">
+        <div class="site-container">
+          <h2>{{ 'Our Clients'|t }}</h2>
+          {{ drupal_view('clients', 'block_1') }}
+        </div>
+      </div>
+      <div id="models-section">
+        <div class="site-container">
+          {{ drupal_view('models', 'block_1') }}
+          <div class="instagram-section">
+            <div class="ig-logo"></div>
+            <span>Follow us on Instagram</span>
+            <div class="userhandle"><a target="_blank" href="https://www.instagram.com/ladybag_mnl/">@ladybag_mnl</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>{# /.layout-content #}
+  </main>
+
+  {% if page.footer %}
+    <footer id="footer" role="contentinfo">
+      <div class="site-container">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
