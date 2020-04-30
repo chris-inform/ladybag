@@ -1,5 +1,17 @@
 <?php
 
-// function tinycuervo_order_total_summary(&$variables) {
-// 	$variables['attributes']['class'][] = 'total-section';
-// }
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function tinycuervo_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->getType();
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+  else {
+    $variables['attributes']['class'][] = 'page-no-node';
+  }
+}

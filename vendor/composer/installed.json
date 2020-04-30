@@ -470,17 +470,17 @@
     },
     {
         "name": "composer/ca-bundle",
-        "version": "1.2.6",
-        "version_normalized": "1.2.6.0",
+        "version": "1.2.7",
+        "version_normalized": "1.2.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+            "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+            "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
             "shasum": ""
         },
         "require": {
@@ -493,7 +493,7 @@
             "psr/log": "^1.0",
             "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
         },
-        "time": "2020-01-13T10:02:55+00:00",
+        "time": "2020-04-08T08:27:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -524,21 +524,31 @@
             "certificate",
             "ssl",
             "tls"
+        ],
+        "funding": [
+            {
+                "url": "https://packagist.com",
+                "type": "custom"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                "type": "tidelift"
+            }
         ]
     },
     {
         "name": "composer/composer",
-        "version": "1.10.1",
-        "version_normalized": "1.10.1.0",
+        "version": "1.10.5",
+        "version_normalized": "1.10.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/composer.git",
-            "reference": "b912a45da3e2b22f5cb5a23e441b697a295ba011"
+            "reference": "7a4d5b6aa30d2118af27c04f5e897b57156ccfa9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/composer/zipball/b912a45da3e2b22f5cb5a23e441b697a295ba011",
-            "reference": "b912a45da3e2b22f5cb5a23e441b697a295ba011",
+            "url": "https://api.github.com/repos/composer/composer/zipball/7a4d5b6aa30d2118af27c04f5e897b57156ccfa9",
+            "reference": "7a4d5b6aa30d2118af27c04f5e897b57156ccfa9",
             "shasum": ""
         },
         "require": {
@@ -568,7 +578,7 @@
             "ext-zip": "Enabling the zip extension allows you to unzip archives",
             "ext-zlib": "Allow gzip compression of HTTP requests"
         },
-        "time": "2020-03-13T19:34:27+00:00",
+        "time": "2020-04-10T09:44:22+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1849,6 +1859,274 @@
         }
     },
     {
+        "name": "drupal/commerce_number_pattern",
+        "version": "2.17.0",
+        "version_normalized": "2.17.0.0",
+        "require": {
+            "drupal/commerce": "self.version",
+            "drupal/commerce_store": "*",
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "type": "metapackage",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.17",
+                "datestamp": "1582923518",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Provides configurable patterns for generating sequential numbers.",
+        "homepage": "https://www.drupal.org/project/commerce",
+        "support": {
+            "source": "https://git.drupalcode.org/project/commerce"
+        }
+    },
+    {
+        "name": "drupal/commerce_order",
+        "version": "2.17.0",
+        "version_normalized": "2.17.0.0",
+        "require": {
+            "drupal/commerce": "self.version",
+            "drupal/commerce_number_pattern": "*",
+            "drupal/commerce_price": "*",
+            "drupal/commerce_store": "*",
+            "drupal/core": "^8.7.7 || ^9",
+            "drupal/entity_reference_revisions": "*",
+            "drupal/profile": "*",
+            "drupal/state_machine": "*"
+        },
+        "type": "metapackage",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.17",
+                "datestamp": "1582923518",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Defines the Order entity and associated features.",
+        "homepage": "https://www.drupal.org/project/commerce",
+        "support": {
+            "source": "https://git.drupalcode.org/project/commerce"
+        }
+    },
+    {
+        "name": "drupal/commerce_price",
+        "version": "2.17.0",
+        "version_normalized": "2.17.0.0",
+        "require": {
+            "drupal/commerce": "self.version",
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "type": "metapackage",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.17",
+                "datestamp": "1582923518",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Defines the Currency entity.",
+        "homepage": "https://www.drupal.org/project/commerce",
+        "support": {
+            "source": "https://git.drupalcode.org/project/commerce"
+        }
+    },
+    {
+        "name": "drupal/commerce_shipping",
+        "version": "2.0.0-rc1",
+        "version_normalized": "2.0.0.0-RC1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/commerce_shipping.git",
+            "reference": "8.x-2.0-rc1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/commerce_shipping-8.x-2.0-rc1.zip",
+            "reference": "8.x-2.0-rc1",
+            "shasum": "7cca5ef9f8ca3e7641db24d726af44d023f2b523"
+        },
+        "require": {
+            "drupal/commerce": "^2.17",
+            "drupal/commerce_order": "*",
+            "drupal/commerce_price": "*",
+            "drupal/core": "^8.7.7 || ^9",
+            "drupal/physical": "^1.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0-rc1",
+                "datestamp": "1583429595",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "RC releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "Add condition based on item quantity": "https://www.drupal.org/files/issues/2019-04-23/commerce_shipping-global-quantity-condition-3050162-0.patch"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "googletorp",
+                "homepage": "https://www.drupal.org/user/386230"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Provides shipping functionality for Commerce.",
+        "homepage": "http://drupal.org/project/commerce_shipping",
+        "support": {
+            "source": "https://git.drupalcode.org/project/commerce_shipping"
+        }
+    },
+    {
+        "name": "drupal/commerce_store",
+        "version": "2.17.0",
+        "version_normalized": "2.17.0.0",
+        "require": {
+            "drupal/commerce": "self.version",
+            "drupal/commerce_price": "*",
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "type": "metapackage",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.17",
+                "datestamp": "1582923518",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Defines the Store entity and associated features.",
+        "homepage": "https://www.drupal.org/project/commerce",
+        "support": {
+            "source": "https://git.drupalcode.org/project/commerce"
+        }
+    },
+    {
         "name": "drupal/console",
         "version": "1.9.4",
         "version_normalized": "1.9.4.0",
@@ -2115,17 +2393,17 @@
     },
     {
         "name": "drupal/core",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core.git",
-            "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8"
+            "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core/zipball/34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
-            "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
+            "url": "https://api.github.com/repos/drupal/core/zipball/e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
+            "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
             "shasum": ""
         },
         "require": {
@@ -2291,7 +2569,7 @@
             "drupal/workflows": "self.version",
             "drupal/workspaces": "self.version"
         },
-        "time": "2020-03-18T16:26:33+00:00",
+        "time": "2020-04-02T19:01:19+00:00",
         "type": "drupal-core",
         "extra": {
             "drupal-scaffold": {
@@ -2348,8 +2626,8 @@
     },
     {
         "name": "drupal/core-composer-scaffold",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2397,8 +2675,8 @@
     },
     {
         "name": "drupal/core-dev",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-dev.git",
@@ -2443,8 +2721,8 @@
     },
     {
         "name": "drupal/core-project-message",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-project-message.git",
@@ -2483,17 +2761,17 @@
     },
     {
         "name": "drupal/core-recommended",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-recommended.git",
-            "reference": "4155bff03954bae498029899f44e8adf697b20e6"
+            "reference": "7163954903e63ead331de073c83ad769926ad9a1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/4155bff03954bae498029899f44e8adf697b20e6",
-            "reference": "4155bff03954bae498029899f44e8adf697b20e6",
+            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/7163954903e63ead331de073c83ad769926ad9a1",
+            "reference": "7163954903e63ead331de073c83ad769926ad9a1",
             "shasum": ""
         },
         "require": {
@@ -2506,7 +2784,7 @@
             "doctrine/common": "v2.7.3",
             "doctrine/inflector": "v1.2.0",
             "doctrine/lexer": "1.0.2",
-            "drupal/core": "8.8.4",
+            "drupal/core": "8.8.5",
             "easyrdf/easyrdf": "0.9.1",
             "egulias/email-validator": "2.1.11",
             "guzzlehttp/guzzle": "6.3.3",
@@ -2554,7 +2832,7 @@
         "conflict": {
             "webflo/drupal-core-strict": "*"
         },
-        "time": "2020-03-18T16:26:33+00:00",
+        "time": "2020-04-02T19:01:19+00:00",
         "type": "metapackage",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -2564,8 +2842,8 @@
     },
     {
         "name": "drupal/core-vendor-hardening",
-        "version": "8.8.4",
-        "version_normalized": "8.8.4.0",
+        "version": "8.8.5",
+        "version_normalized": "8.8.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-vendor-hardening.git",
@@ -2820,6 +3098,71 @@
         }
     },
     {
+        "name": "drupal/physical",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/physical.git",
+            "reference": "8.x-1.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/physical-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "31cbf61c3ead4ab655b1ec56fdc3bcbe9331a751"
+        },
+        "require": {
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.1",
+                "datestamp": "1581940864",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "czigor",
+                "homepage": "https://www.drupal.org/user/826222"
+            },
+            {
+                "name": "jsacksick",
+                "homepage": "https://www.drupal.org/user/972218"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Physical supplies such fields as physical weight and dimensions.",
+        "homepage": "http://drupal.org/project/physical",
+        "support": {
+            "source": "https://git.drupalcode.org/project/physical"
+        }
+    },
+    {
         "name": "drupal/profile",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -2992,30 +3335,27 @@
     },
     {
         "name": "drupal/token",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/token.git",
-            "reference": "8.x-1.6"
+            "reference": "8.x-1.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/token-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "22039a3d927220609e708932ac5c501b90ca4925"
+            "url": "https://ftp.drupal.org/files/projects/token-8.x-1.7.zip",
+            "reference": "8.x-1.7",
+            "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
         },
         "require": {
             "drupal/core": "^8.7.7 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.6",
-                "datestamp": "1577708583",
+                "version": "8.x-1.7",
+                "datestamp": "1587893588",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3552,100 +3892,6 @@
         ]
     },
     {
-        "name": "jakub-onderka/php-console-color",
-        "version": "v0.2",
-        "version_normalized": "0.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-            "reference": "d5deaecff52a0d61ccb613bb3804088da0307191"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
-            "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "jakub-onderka/php-code-style": "1.0",
-            "jakub-onderka/php-parallel-lint": "1.0",
-            "jakub-onderka/php-var-dump-check": "0.*",
-            "phpunit/phpunit": "~4.3",
-            "squizlabs/php_codesniffer": "1.*"
-        },
-        "time": "2018-09-29T17:23:10+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "JakubOnderka\\PhpConsoleColor\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Jakub Onderka",
-                "email": "jakub.onderka@gmail.com"
-            }
-        ],
-        "abandoned": "php-parallel-lint/php-console-color"
-    },
-    {
-        "name": "jakub-onderka/php-console-highlighter",
-        "version": "v0.4",
-        "version_normalized": "0.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/JakubOnderka/PHP-Console-Highlighter.git",
-            "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/9f7a229a69d52506914b4bc61bfdb199d90c5547",
-            "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547",
-            "shasum": ""
-        },
-        "require": {
-            "ext-tokenizer": "*",
-            "jakub-onderka/php-console-color": "~0.2",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "jakub-onderka/php-code-style": "~1.0",
-            "jakub-onderka/php-parallel-lint": "~1.0",
-            "jakub-onderka/php-var-dump-check": "~0.1",
-            "phpunit/phpunit": "~4.0",
-            "squizlabs/php_codesniffer": "~1.5"
-        },
-        "time": "2018-09-29T18:48:56+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jakub Onderka",
-                "email": "acci@acci.cz",
-                "homepage": "http://www.acci.cz/"
-            }
-        ],
-        "description": "Highlight PHP code in terminal",
-        "abandoned": "php-parallel-lint/php-console-highlighter"
-    },
-    {
         "name": "jcalderonzumba/gastonjs",
         "version": "v1.2.0",
         "version_normalized": "1.2.0.0",
@@ -3999,17 +4245,17 @@
     },
     {
         "name": "nikic/php-parser",
-        "version": "v4.3.0",
-        "version_normalized": "4.3.0.0",
+        "version": "v4.4.0",
+        "version_normalized": "4.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/nikic/PHP-Parser.git",
-            "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
+            "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
-            "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
+            "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
             "shasum": ""
         },
         "require": {
@@ -4020,7 +4266,7 @@
             "ircmaxell/php-yacc": "0.0.5",
             "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
         },
-        "time": "2019-11-08T13:50:10+00:00",
+        "time": "2020-04-10T16:34:50+00:00",
         "bin": [
             "bin/php-parse"
         ],
@@ -4426,26 +4672,23 @@
     },
     {
         "name": "phpdocumentor/reflection-common",
-        "version": "2.0.0",
-        "version_normalized": "2.0.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-            "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+            "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-            "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+            "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+            "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
             "shasum": ""
         },
         "require": {
             "php": ">=7.1"
         },
-        "require-dev": {
-            "phpunit/phpunit": "~6"
-        },
-        "time": "2018-08-07T13:53:10+00:00",
+        "time": "2020-04-27T09:25:28+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5148,24 +5391,23 @@
     },
     {
         "name": "psy/psysh",
-        "version": "v0.10.2",
-        "version_normalized": "0.10.2.0",
+        "version": "v0.10.3",
+        "version_normalized": "0.10.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/bobthecow/psysh.git",
-            "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8"
+            "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/573c2362c3cdebe846b4adae4b630eecb350afd8",
-            "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8",
+            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
+            "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
             "shasum": ""
         },
         "require": {
             "dnoegel/php-xdg-base-dir": "0.1.*",
             "ext-json": "*",
             "ext-tokenizer": "*",
-            "jakub-onderka/php-console-highlighter": "0.4.*|0.3.*",
             "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
             "php": "^8.0 || ^7.0 || ^5.5.9",
             "symfony/console": "~5.0|~4.0|~3.0|^2.4.2|~2.3.10",
@@ -5173,7 +5415,7 @@
         },
         "require-dev": {
             "bamarni/composer-bin-plugin": "^1.2",
-            "hoa/console": "~3.16|~2.15"
+            "hoa/console": "3.17.*"
         },
         "suggest": {
             "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -5182,7 +5424,7 @@
             "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
             "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
         },
-        "time": "2020-03-21T06:55:27+00:00",
+        "time": "2020-04-07T06:44:48+00:00",
         "bin": [
             "bin/psysh"
         ],
@@ -6001,17 +6243,17 @@
     },
     {
         "name": "squizlabs/php_codesniffer",
-        "version": "3.5.4",
-        "version_normalized": "3.5.4.0",
+        "version": "3.5.5",
+        "version_normalized": "3.5.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-            "reference": "dceec07328401de6211037abbb18bda423677e26"
+            "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
-            "reference": "dceec07328401de6211037abbb18bda423677e26",
+            "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+            "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
             "shasum": ""
         },
         "require": {
@@ -6023,7 +6265,7 @@
         "require-dev": {
             "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
         },
-        "time": "2020-01-30T22:20:29+00:00",
+        "time": "2020-04-17T01:09:41+00:00",
         "bin": [
             "bin/phpcs",
             "bin/phpcbf"
@@ -6213,17 +6455,17 @@
     },
     {
         "name": "symfony/browser-kit",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/browser-kit.git",
-            "reference": "ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b"
+            "reference": "1c7bcd954ad1fc02354c4cfd3fcd1b0c95245367"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/browser-kit/zipball/ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b",
-            "reference": "ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b",
+            "url": "https://api.github.com/repos/symfony/browser-kit/zipball/1c7bcd954ad1fc02354c4cfd3fcd1b0c95245367",
+            "reference": "1c7bcd954ad1fc02354c4cfd3fcd1b0c95245367",
             "shasum": ""
         },
         "require": {
@@ -6237,7 +6479,7 @@
         "suggest": {
             "symfony/process": ""
         },
-        "time": "2020-01-01T11:03:25+00:00",
+        "time": "2020-03-15T09:38:08+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6344,17 +6586,17 @@
     },
     {
         "name": "symfony/config",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/config.git",
-            "reference": "03328d6e172ec7384341c622d4c28d350040d021"
+            "reference": "3634991bea549e73c45a964c38f30ceeae6ed877"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/config/zipball/03328d6e172ec7384341c622d4c28d350040d021",
-            "reference": "03328d6e172ec7384341c622d4c28d350040d021",
+            "url": "https://api.github.com/repos/symfony/config/zipball/3634991bea549e73c45a964c38f30ceeae6ed877",
+            "reference": "3634991bea549e73c45a964c38f30ceeae6ed877",
             "shasum": ""
         },
         "require": {
@@ -6375,7 +6617,7 @@
         "suggest": {
             "symfony/yaml": "To use the yaml reference dumper"
         },
-        "time": "2020-02-03T08:11:57+00:00",
+        "time": "2020-04-12T14:33:46+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6406,7 +6648,21 @@
             }
         ],
         "description": "Symfony Config Component",
-        "homepage": "https://symfony.com"
+        "homepage": "https://symfony.com",
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
     },
     {
         "name": "symfony/console",
@@ -6484,23 +6740,23 @@
     },
     {
         "name": "symfony/css-selector",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/css-selector.git",
-            "reference": "ee9b946e7223b11257329a054c64396b19d619e1"
+            "reference": "9ccf6e78077a3fc1596e6c7b5958008965a11518"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/css-selector/zipball/ee9b946e7223b11257329a054c64396b19d619e1",
-            "reference": "ee9b946e7223b11257329a054c64396b19d619e1",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/9ccf6e78077a3fc1596e6c7b5958008965a11518",
+            "reference": "9ccf6e78077a3fc1596e6c7b5958008965a11518",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2020-02-04T08:04:52+00:00",
+        "time": "2020-03-16T08:31:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6535,7 +6791,21 @@
             }
         ],
         "description": "Symfony CssSelector Component",
-        "homepage": "https://symfony.com"
+        "homepage": "https://symfony.com",
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
     },
     {
         "name": "symfony/debug",
@@ -6670,17 +6940,17 @@
     },
     {
         "name": "symfony/dom-crawler",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/dom-crawler.git",
-            "reference": "5ea08fead7392bc5bfe83fb8a289ac9b72cb689e"
+            "reference": "ceacdab4abf7695ef6bec77c8b7983e1544c6358"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/5ea08fead7392bc5bfe83fb8a289ac9b72cb689e",
-            "reference": "5ea08fead7392bc5bfe83fb8a289ac9b72cb689e",
+            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/ceacdab4abf7695ef6bec77c8b7983e1544c6358",
+            "reference": "ceacdab4abf7695ef6bec77c8b7983e1544c6358",
             "shasum": ""
         },
         "require": {
@@ -6694,7 +6964,7 @@
         "suggest": {
             "symfony/css-selector": ""
         },
-        "time": "2020-02-26T17:12:32+00:00",
+        "time": "2020-03-16T08:31:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6808,24 +7078,24 @@
     },
     {
         "name": "symfony/filesystem",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/filesystem.git",
-            "reference": "0a0d3b4bda11aa3a0464531c40e681e184e75628"
+            "reference": "78a93e5606a19d0fb490afc3c4a9b7ecd86e1515"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/0a0d3b4bda11aa3a0464531c40e681e184e75628",
-            "reference": "0a0d3b4bda11aa3a0464531c40e681e184e75628",
+            "url": "https://api.github.com/repos/symfony/filesystem/zipball/78a93e5606a19d0fb490afc3c4a9b7ecd86e1515",
+            "reference": "78a93e5606a19d0fb490afc3c4a9b7ecd86e1515",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8",
             "symfony/polyfill-ctype": "~1.8"
         },
-        "time": "2020-01-17T08:50:08+00:00",
+        "time": "2020-04-12T16:54:01+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6856,12 +7126,26 @@
             }
         ],
         "description": "Symfony Filesystem Component",
-        "homepage": "https://symfony.com"
+        "homepage": "https://symfony.com",
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
     },
     {
         "name": "symfony/finder",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
@@ -7059,17 +7343,17 @@
     },
     {
         "name": "symfony/lock",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/lock.git",
-            "reference": "c8fe2c2ea8177852825a0b92d0897114feda0695"
+            "reference": "ce180b892bd7d6b0e10f662ca95f7c85350a62b0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/lock/zipball/c8fe2c2ea8177852825a0b92d0897114feda0695",
-            "reference": "c8fe2c2ea8177852825a0b92d0897114feda0695",
+            "url": "https://api.github.com/repos/symfony/lock/zipball/ce180b892bd7d6b0e10f662ca95f7c85350a62b0",
+            "reference": "ce180b892bd7d6b0e10f662ca95f7c85350a62b0",
             "shasum": ""
         },
         "require": {
@@ -7080,7 +7364,7 @@
         "require-dev": {
             "predis/predis": "~1.0"
         },
-        "time": "2020-02-04T08:04:52+00:00",
+        "time": "2020-03-16T15:51:59+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -7119,33 +7403,47 @@
             "mutex",
             "redlock",
             "semaphore"
+        ],
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
         ]
     },
     {
         "name": "symfony/phpunit-bridge",
-        "version": "v3.4.38",
-        "version_normalized": "3.4.38.0",
+        "version": "v3.4.40",
+        "version_normalized": "3.4.40.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/phpunit-bridge.git",
-            "reference": "c02893ae43532b46a4f0e0f207d088b939f278d9"
+            "reference": "58c7de42b8b13c3bec82dbb8a87d00e4d83dd7c2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/c02893ae43532b46a4f0e0f207d088b939f278d9",
-            "reference": "c02893ae43532b46a4f0e0f207d088b939f278d9",
+            "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/58c7de42b8b13c3bec82dbb8a87d00e4d83dd7c2",
+            "reference": "58c7de42b8b13c3bec82dbb8a87d00e4d83dd7c2",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
         "conflict": {
-            "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0|<6.4,>=6.0"
+            "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0|<6.4,>=6.0|9.1.2"
         },
         "suggest": {
             "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
         },
-        "time": "2020-02-21T08:01:47+00:00",
+        "time": "2020-04-25T12:18:34+00:00",
         "bin": [
             "bin/simple-phpunit"
         ],
@@ -8065,17 +8363,17 @@
     },
     {
         "name": "symfony/var-dumper",
-        "version": "v4.4.5",
-        "version_normalized": "4.4.5.0",
+        "version": "v4.4.8",
+        "version_normalized": "4.4.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/var-dumper.git",
-            "reference": "2572839911702b0405479410ea7a1334bfab0b96"
+            "reference": "c587e04ce5d1aa62d534a038f574d9a709e814cf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2572839911702b0405479410ea7a1334bfab0b96",
-            "reference": "2572839911702b0405479410ea7a1334bfab0b96",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c587e04ce5d1aa62d534a038f574d9a709e814cf",
+            "reference": "c587e04ce5d1aa62d534a038f574d9a709e814cf",
             "shasum": ""
         },
         "require": {
@@ -8098,7 +8396,7 @@
             "ext-intl": "To show region name in time zone dump",
             "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
         },
-        "time": "2020-02-24T13:10:00+00:00",
+        "time": "2020-04-12T16:14:02+00:00",
         "bin": [
             "Resources/bin/var-dump-server"
         ],
@@ -8422,17 +8720,17 @@
     },
     {
         "name": "webmozart/assert",
-        "version": "1.7.0",
-        "version_normalized": "1.7.0.0",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/webmozart/assert.git",
-            "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+            "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-            "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+            "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+            "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
             "shasum": ""
         },
         "require": {
@@ -8440,12 +8738,12 @@
             "symfony/polyfill-ctype": "^1.8"
         },
         "conflict": {
-            "vimeo/psalm": "<3.6.0"
+            "vimeo/psalm": "<3.9.1"
         },
         "require-dev": {
             "phpunit/phpunit": "^4.8.36 || ^7.5.13"
         },
-        "time": "2020-02-14T12:15:55+00:00",
+        "time": "2020-04-18T12:12:48+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

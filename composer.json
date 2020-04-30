@@ -18,6 +18,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal/commerce": "^2.17",
+        "drupal/commerce_shipping": "^2.0@RC",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
@@ -43,6 +44,9 @@
             },
             "drupal/commerce_paypal": {
                 "Display an error message if the site is not eligible for custom card fields" : "https://www.drupal.org/files/issues/2019-09-24/commerce_paypal-3083314-2.patch"
+            },
+            "drupal/commerce_shipping": {
+                "Add condition based on item quantity" : "https://www.drupal.org/files/issues/2019-04-23/commerce_shipping-global-quantity-condition-3050162-0.patch"
             }
         },
         "drupal-scaffold": {

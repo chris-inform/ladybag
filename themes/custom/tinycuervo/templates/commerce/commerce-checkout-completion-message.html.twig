@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - payment_instructions: The payment instructions, if provided.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-complete">
+	{#{ vardumper(order_entity.payment_gateway[0]) }#}
+
+	{#{ vardumper(order_entity.payment_gateway[0].value['target_id']) }#}
+	
+
+	<div class="top">
+		<div class="order-success-icon">
+		  <i class="fal fa-check-circle"></i>
+		  Order Successful
+		</div>
+		{% if order_entity.payment_gateway[0].value['target_id'] != 'bank_transfer' %}
+			<div class="order-success-msg">
+			  Email your proof of payment to <a href="mailto:shop@ladybagmnl.com">shop@ladybagmnl.com</a> along with your name as the subject
+			</div>
+		{% endif %}
+	</div>
+  {% if payment_instructions %}
+    <div class="checkout-complete__payment-instructions">
+      <!-- <h2>{#{ 'Payment instructions'|t }#}</h2> -->
+      {{ payment_instructions }}
+    </div>
+  {% endif %}
+</div>
