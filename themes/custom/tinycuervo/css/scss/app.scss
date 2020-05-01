@@ -472,6 +472,39 @@ a {
 		.bank-item {
 			margin: 2em 0;
 		}
+		.bdo-logo {
+			background: url(../images/bdo.jpg) no-repeat center;
+			width: 6em;
+			height: 4em;
+		}
+		.bpi-logo {
+			background: url(../images/bpi.jpg) no-repeat center;
+			width: 7em;
+			height: 4em;
+		}
+		.gcash-logo {
+			background: url(../images/gcash.jpg) no-repeat center;
+			width: 9em;
+			height: 4em;
+		}
+		.palawanex-logo {
+			background: url(../images/palawanexpress.jpg) no-repeat center;
+			width: 8.5em;
+			height: 4em;
+		}
+		.mlhuillier-logo {
+			background: url(../images/mlhuillier.jpg) no-repeat center;
+			width: 8em;
+			height: 4em;
+		}
+		.bdo-logo,
+		.bpi-logo,
+		.gcash-logo,
+		.palawanex-logo,
+		.mlhuillier-logo {
+			display: inline-block;
+			background-size: 100% auto;
+		}
 	}
 }
 .alert-status {
@@ -1764,4 +1797,8 @@ main {
 
 @media only screen and (max-width: 575px) {
 	@import 'breakpoints/575.scss';
+}
+
+@media only screen and (max-width: 414px) {
+	@import 'breakpoints/414.scss';
 }

@@ -386,6 +386,33 @@ a:hover, a:focus {
           font-family: "latoitalic", sans-serif; }
     .checkout-complete .checkout-complete__payment-instructions .bank-item {
       margin: 2em 0; }
+    .checkout-complete .checkout-complete__payment-instructions .bdo-logo {
+      background: url(../images/bdo.jpg) no-repeat center;
+      width: 6em;
+      height: 4em; }
+    .checkout-complete .checkout-complete__payment-instructions .bpi-logo {
+      background: url(../images/bpi.jpg) no-repeat center;
+      width: 7em;
+      height: 4em; }
+    .checkout-complete .checkout-complete__payment-instructions .gcash-logo {
+      background: url(../images/gcash.jpg) no-repeat center;
+      width: 9em;
+      height: 4em; }
+    .checkout-complete .checkout-complete__payment-instructions .palawanex-logo {
+      background: url(../images/palawanexpress.jpg) no-repeat center;
+      width: 8.5em;
+      height: 4em; }
+    .checkout-complete .checkout-complete__payment-instructions .mlhuillier-logo {
+      background: url(../images/mlhuillier.jpg) no-repeat center;
+      width: 8em;
+      height: 4em; }
+    .checkout-complete .checkout-complete__payment-instructions .bdo-logo,
+    .checkout-complete .checkout-complete__payment-instructions .bpi-logo,
+    .checkout-complete .checkout-complete__payment-instructions .gcash-logo,
+    .checkout-complete .checkout-complete__payment-instructions .palawanex-logo,
+    .checkout-complete .checkout-complete__payment-instructions .mlhuillier-logo {
+      display: inline-block;
+      background-size: 100% auto; }
 
 .alert-status {
   color: #fff;
@@ -1591,10 +1618,15 @@ main {
     padding: 0;
     text-align: center; }
   main.prod-page {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .cart-page .views-row .mid .bot {
+    position: relative;
+    margin-bottom: 0;
+    margin-top: .2em; } }
 
 @media only screen and (max-width: 575px) {
   #bestsellers-section {
+    overflow: hidden;
     padding: 0;
     background: #a1b5b6;
     background: linear-gradient(180deg, #a1b5b6 0%, #a1b5b6 85%, #f3f3f3 85%, #f3f3f3 100%); }
@@ -1628,16 +1660,12 @@ main {
       padding: 1.5em; }
     .product-page #views-exposed-form-products-page-page-1 {
       margin-bottom: 1.5em;
-      border: 1px solid #292929;
-      width: 100%;
-      padding: .25em 0; }
+      width: 100%; }
       .product-page #views-exposed-form-products-page-page-1 label {
-        border-right: 1px solid #292929;
         display: inline-block;
         width: 38%;
         margin-right: 0; }
       .product-page #views-exposed-form-products-page-page-1 select {
-        border: none;
         display: inline-block;
         width: 62%; }
   .cart-offcanvas--right {
@@ -1655,4 +1683,46 @@ main {
       font-size: 1.25rem; }
   #cart-offcanvas .cart-block--offcanvas-contents__links a {
     font-size: .75em;
-    padding-top: .25em; } }
+    padding-top: .25em; }
+  .cart-page .views-row .mid {
+    line-height: 1em; }
+  .cart-page .views-row .title {
+    margin-bottom: .25em;
+    font-size: .85em; }
+  .cart-page .views-row .price,
+  .cart-page .views-row .quantity {
+    font-size: .65em; }
+  .cart-page .views-row .right a {
+    margin-top: .2em;
+    margin-bottom: .2em;
+    width: 1.8em;
+    height: 1.8em;
+    padding-top: 0; }
+    .cart-page .views-row .right a i {
+      font-size: .65em; }
+  main.cart-page {
+    margin-top: 2em; }
+  main.product-page {
+    margin-bottom: 0; } }
+
+@media only screen and (max-width: 414px) {
+  #our-clients-section h2 {
+    font-size: 3em; }
+  #our-clients-section .views-element-container {
+    padding-left: 1em;
+    padding-right: 1em; }
+  #our-clients-section .slide__description {
+    font-size: 1em; }
+  #block-checkoutprogress ol:before {
+    margin-top: -1em; }
+  #block-checkoutprogress ol li {
+    font-size: .75em; }
+    #block-checkoutprogress ol li:before {
+      font-size: 1rem; }
+  .layout-region-checkout-secondary {
+    padding-left: 1em;
+    padding-right: 1em; }
+    .layout-region-checkout-secondary .checkout-pane-order-summary table th, .layout-region-checkout-secondary .checkout-pane-order-summary table td {
+      padding-left: .25em;
+      padding-right: .25em;
+      font-size: .75em; } }

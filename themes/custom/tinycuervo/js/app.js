@@ -126,7 +126,12 @@ jQuery(document).ready(function($) {
 
 	// mobile sidebar colors category change links
 	$('.submenu a').each(function() {
-		var newSubmenuPath = '/ladybag/shop?bestseller=All&color='+$(this).attr('href');
+		// var rawurl = "/option=com_content&view=article&id=2&Itemid=2";
+		// rawurl = rawurl.substr(rawurl.indexOf('/') + 1);
+
+		var newPath = $(this).attr('href');
+		newPath = newPath.substr(newPath.indexOf('/') + 1);
+		var newSubmenuPath = '/shop?bestseller=All&color='+newPath;
 		$(this).attr('href', newSubmenuPath);
 	});
 

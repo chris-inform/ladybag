@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_mail_alter().
+ */
+function order_subject_mail_alter(array &$message) {
+  // Order receipt.
+  if ($message['id'] === 'commerce_order_receipt') {
+    /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
+    $order = $message['params']['order'];
+
+    // Change the email subject.
+    // @todo Remove this if/when it becomes configurable.
+    //   https://www.drupal.org/project/commerce/issues/2924159
+    $message['subject'] = t('Order Received - Lady Bag Manila Order #@number', [
+      '@number' => $order->getOrderNumber(),
+    ]);
+  }
+}

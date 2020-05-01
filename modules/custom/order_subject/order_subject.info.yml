@@ -1,0 +1,7 @@
+name: Order Email Subject Override
+type: module
+description: 'Override the Order Email Subject Confirmation'
+package: Custom
+
+type: module
+core: 8.x
