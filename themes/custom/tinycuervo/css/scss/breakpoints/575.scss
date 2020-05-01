@@ -64,3 +64,27 @@
 		}
 	}
 }
+.cart-offcanvas--right {
+	width: 16em;
+}
+#cart-offcanvas {
+	.cart-block--offcanvas-contents {
+		padding-left: 1em;
+		padding-right: 1em;
+		td {
+			padding: .65em .25em;
+			font-size: .7em;
+		}
+	}
+	.cart--cart-offcanvas__close {
+		padding-left: 1em;
+		padding-right: 1em;
+		.btn {
+			font-size: 1.25rem;
+		}
+	}
+	.cart-block--offcanvas-contents__links a {
+		font-size: .75em;
+		padding-top: .25em;
+	}
+}

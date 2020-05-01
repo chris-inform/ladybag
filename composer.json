@@ -24,6 +24,7 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
+        "drupal/swiftmailer": "^1.0@beta",
         "sainsburys/guzzle-oauth2-plugin": "^3.0"
     },
     "require-dev": {

@@ -985,6 +985,70 @@ a {
 		}
 	}
 }
+#cart-offcanvas {
+	.cart--cart-offcanvas__close {
+		padding: .5em 2em;
+		.btn {
+			padding: 0;
+			width: auto;
+			font-size: 2em;
+		}
+	}
+	.cart-block--offcanvas-contents {
+		padding: 1em 2em 2em;
+		td {
+			vertical-align: middle;
+			font-size: .85em;
+			&.cart-block--offcanvas-cart-table__price {
+				color: $color-gray;
+			}
+			&.cart-block--offcanvas-cart-table__quantity {
+				input {
+					border: 1px solid darken($color-lightgray,5%);
+					outline: none;
+					padding: .1em;
+				}
+			}
+			&.cart-block--offcanvas-cart-table__remove {
+				.btn {
+					padding: 0;
+					max-width: 100%;
+					width: auto;
+					font-size: 1rem;
+					color: $color-error;
+				}
+			}
+			.cart-block--offcanvas-contents__update {
+				background-color: $color-charcoal;
+				border-color: $color-charcoal;
+				color: $color-white;
+				float: right;
+				&:hover {
+					background-color: $color-charcoal;
+					border-color: $color-charcoal;
+					color: $color-white;
+				}
+			}
+		}
+	}
+	.cart-block--offcanvas-contents__links {
+		a {
+			color: $color-ladybagpink;
+			font-size: .9em;
+			font-family: $font-lato-bold;
+			text-transform: uppercase;
+			&:before {
+				content: '\f07a';
+				font-family: "Font Awesome 5 Pro";
+				font-weight: 300;
+				margin-right: .5em;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
 #block-cart {
 	text-align: right;
 	.cart-block--summary a {
@@ -998,9 +1062,18 @@ a {
 		width: 1.11em;
 		height: 1.11em;
 		margin-right: .2em;
+		img {
+			display: none;
+		}
 	}
 	.cart-block--summary__count {
 		color: $color-charcoal;
+		sup {
+			color: $color-ladybagpink;
+			position: relative;
+			left: -.25em;
+			font-family: $font-lato-bold;
+		}
 	}
 	.cart-block--link__expand {
 		span {
@@ -1055,8 +1128,8 @@ a {
 	}
 }
 .cart-empty-page {
-	margin-top: 10em;
-	margin-bottom: 8em;
+	margin-top: 5em;
+	margin-bottom: 5em;
 	text-align: center;
 	.cart-icon {
 		margin-bottom: 1.2em;
@@ -1504,6 +1577,9 @@ main {
 	margin-top: 4em;
 	margin-bottom: 4em;
 	position: relative;
+	&.product-page {
+		margin-top: 0;
+	}
 	#mobile-sidebar {
 		position: fixed;
 		top: 5.625em;
@@ -1585,7 +1661,7 @@ main {
 #mobile-burg-menu {
 	display: none;
   z-index: 5010;
-  width: 1.8em;
+  width: 1.6em;
   height: 1.4em;
   position: relative;
   @include transform(rotate(0deg));
@@ -1594,7 +1670,7 @@ main {
   span {
     display: block;
     position: absolute;
-    height: .19em;
+    height: .12em;
     width: 100%;
     background: $color-charcoal;
     border-radius: .19em;
@@ -1607,10 +1683,10 @@ main {
       top: 0px;
     }
     &:nth-child(2) {
-      top: .6em;
+      top: .5em;
     }
     &:nth-child(3) {
-      top: 1.2em;
+      top: 1em;
       width:70%;
     }
   }

@@ -15,3 +15,8 @@ function tinycuervo_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'page-no-node';
   }
 }
+
+function tinycuervo_preprocess(&$variables, $hook)
+{
+    $variables['base_path'] = base_path();
+}
