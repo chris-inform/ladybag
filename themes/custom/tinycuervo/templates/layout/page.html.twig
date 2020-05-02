@@ -31,15 +31,16 @@
       <div class="site-container">
         {{ page.content }}
       </div>
+      
+      {% if page.footer %}
+        <footer id="footer" role="contentinfo">
+          <div class="site-container">
+            {{ page.footer }}
+          </div>
+        </footer>
+      {% endif %}
     </div>{# /.layout-content #}
   </main>
 
-  {% if page.footer %}
-    <footer id="footer" role="contentinfo">
-      <div class="site-container">
-        {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}

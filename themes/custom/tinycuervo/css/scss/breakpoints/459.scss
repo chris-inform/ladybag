@@ -1,0 +1,11 @@
+#block-checkoutprogress ol {
+	&:before {
+		margin-top: -1em;
+	}
+	li {
+		font-size: .75em;
+		&:before {
+			font-size: 1rem;
+		}
+	}
+}

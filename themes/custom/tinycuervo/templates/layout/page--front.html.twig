@@ -1,4 +1,4 @@
-<div class="layout-container">
+<div class="layout-container homepage">
 
   <header id="header" role="banner" class="home">
     <div class="site-container h-100">
@@ -79,15 +79,16 @@
         </div>
       </div>
 
+      {% if page.footer %}
+        <footer id="footer" role="contentinfo">
+          <div class="site-container">
+            {{ page.footer }}
+          </div>
+        </footer>
+      {% endif %}
+
     </div>{# /.layout-content #}
   </main>
 
-  {% if page.footer %}
-    <footer id="footer" role="contentinfo">
-      <div class="site-container">
-        {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}

@@ -1,6 +1,6 @@
 <div class="layout-container">
 
-  <header id="header" role="banner">
+  <header id="header" role="banner" class="product-page-header">
     <div class="site-container h-100">
       <div class="row h-100">
         <div class="col-sm-4 col-3 align-self-center">
@@ -32,15 +32,16 @@
       <div class="site-container">
         {{ page.content }}
       </div>
+
+      {% if page.footer %}
+        <footer id="footer" role="contentinfo">
+          <div class="site-container">
+            {{ page.footer }}
+          </div>
+        </footer>
+      {% endif %}
     </div>{# /.layout-content #}
   </main>
 
-  {% if page.footer %}
-    <footer id="footer" role="contentinfo">
-      <div class="site-container">
-        {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}

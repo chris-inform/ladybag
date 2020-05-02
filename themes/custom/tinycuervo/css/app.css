@@ -168,7 +168,48 @@ a:hover, a:focus {
 
 #header {
   height: 5.625em;
-  /*margin-bottom: .3em;*/ }
+  /*margin-bottom: .3em;*/
+  margin-bottom: 4em; }
+  #header.product-page-header {
+    margin-bottom: 0; }
+
+.homepage #header, .homepage #footer {
+  margin: 0; }
+
+.no-js #loader {
+  display: none; }
+
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0; }
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  display: table; }
+  .se-pre-con span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #F5C418;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px; }
+  .se-pre-con .inner {
+    vertical-align: middle;
+    display: table-cell; }
 
 .site-container {
   max-width: 68em;
@@ -429,6 +470,7 @@ a:hover, a:focus {
     color: #292929; }
 
 #footer {
+  margin-top: 4em;
   background-color: #EFDED6;
   padding: 2.3em 0;
   overflow: hidden; }
@@ -769,6 +811,10 @@ a:hover, a:focus {
   margin-top: -9em;
   background-color: #fff;
   padding: 3.5em 4em 3.5em; }
+
+.product-page #footer .site-container {
+  margin: 0 auto;
+  background-color: transparent; }
 
 .product-page #block-tinycuervo-page-title {
   text-align: center;
@@ -1312,8 +1358,8 @@ a:hover, a:focus {
     line-height: 1.5em; }
 
 main {
-  margin-top: 4em;
-  margin-bottom: 4em;
+  /*margin-top: 4em;
+	margin-bottom: 4em;*/
   position: relative; }
   main.product-page {
     margin-top: 0; }
@@ -1529,7 +1575,10 @@ main {
   #block-tinycuervo-main-menu {
     display: none; }
   #header {
-    box-shadow: 0px 4px 0.2em #F3F3F3; }
+    box-shadow: 0px 4px 0.2em #F3F3F3;
+    margin-bottom: 2em; }
+    #header.single-prod-page-header {
+      margin-bottom: 0; }
   #mobile-burg-menu {
     display: block; }
   #our-products-section {
@@ -1551,6 +1600,7 @@ main {
     #models-section .views-field-field-image {
       margin-bottom: 1.66em; }
   #footer {
+    margin-top: 2em;
     padding: 0; }
     #footer .footer-logo {
       width: 11.11em; }
@@ -1705,6 +1755,14 @@ main {
   main.product-page {
     margin-bottom: 0; } }
 
+@media only screen and (max-width: 459px) {
+  #block-checkoutprogress ol:before {
+    margin-top: -1em; }
+  #block-checkoutprogress ol li {
+    font-size: .75em; }
+    #block-checkoutprogress ol li:before {
+      font-size: 1rem; } }
+
 @media only screen and (max-width: 414px) {
   #our-clients-section h2 {
     font-size: 3em; }
@@ -1713,12 +1771,6 @@ main {
     padding-right: 1em; }
   #our-clients-section .slide__description {
     font-size: 1em; }
-  #block-checkoutprogress ol:before {
-    margin-top: -1em; }
-  #block-checkoutprogress ol li {
-    font-size: .75em; }
-    #block-checkoutprogress ol li:before {
-      font-size: 1rem; }
   .layout-region-checkout-secondary {
     padding-left: 1em;
     padding-right: 1em; }

@@ -227,6 +227,45 @@ a {
 #header {
 	height: 5.625em;
 	/*margin-bottom: .3em;*/
+	margin-bottom: 4em;
+	&.product-page-header {
+		margin-bottom: 0;
+	}
+}
+.homepage {
+	#header,#footer {
+		margin: 0;
+	}
+}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: rgba(255,255,255,.95);
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	display: table;
+	span {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background-color: #F5C418;
+		border-radius: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		top: 3px;
+	}
+	.inner {
+		vertical-align: middle;
+		display: table-cell;
+	}
 }
 .site-container {
 	max-width: 68em;
@@ -524,6 +563,7 @@ a {
   }
 }
 #footer {
+	margin-top: 4em;
 	background-color: $color-blush;
 	padding: 2.3em 0;
 	overflow: hidden;
@@ -929,6 +969,12 @@ a {
 		margin-top: -9em;
 		background-color: $color-white;
 		padding: 3.5em 4em 3.5em;
+	}
+	#footer {
+		.site-container {
+			margin: 0 auto;
+			background-color: transparent;
+		}
 	}
 	#block-tinycuervo-page-title {
 		text-align: center;
@@ -1607,8 +1653,8 @@ a {
 	}
 }
 main {
-	margin-top: 4em;
-	margin-bottom: 4em;
+	/*margin-top: 4em;
+	margin-bottom: 4em;*/
 	position: relative;
 	&.product-page {
 		margin-top: 0;
@@ -1797,6 +1843,10 @@ main {
 
 @media only screen and (max-width: 575px) {
 	@import 'breakpoints/575.scss';
+}
+
+@media only screen and (max-width: 459px) {
+	@import 'breakpoints/459.scss';
 }
 
 @media only screen and (max-width: 414px) {

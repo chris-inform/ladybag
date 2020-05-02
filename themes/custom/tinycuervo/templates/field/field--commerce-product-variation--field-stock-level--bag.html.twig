@@ -67,6 +67,8 @@
         {% else %}
           <div{{ item.attributes }}>{{ item.content['#value'] }} stocks remaining</div>
         {% endif %}
+      {% elseif item.content['#value'] > 3 %}
+        <div></div>
       {% else %}
         <div class="oos">Out of Stock</div>
       {% endif %}
