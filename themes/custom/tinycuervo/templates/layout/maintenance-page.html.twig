@@ -9,35 +9,29 @@
  * @see template_preprocess_maintenance_page()
  */
 #}
-<header role="banner">
-  {% if logo %}
-    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-      <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-    </a>
-  {% endif %}
+<div id="maintenance-wrapper">
+  <div class="inner">
+    <header role="banner">
+      {% if logo %}
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+        </a>
+      {% endif %}
+    </header>
 
-  {% if site_name or site_slogan %}
-    {% if site_name %}
-      <h1>
-        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-      </h1>
-    {% endif %}
+    <main role="main">
 
-    {% if site_slogan %}
-      <div>{{ site_slogan }}</div>
-    {% endif %}
-  {% endif %}
-</header>
+      {{ page.highlighted }}
 
-<main role="main">
-  {% if title %}
-    <h1>{{ title }}</h1>
-  {% endif %}
-
-  {{ page.highlighted }}
-
-  {{ page.content }}
-</main>
+      {{ page.content }}
+    </main>
+    <ul class="social-maintenance">
+      <li><a href="#" title="Facebook"><i class="fab fa-facebook-f">‌​&nbsp;</i></a></li>
+      <li><a href="https://www.instagram.com/ladybag_mnl/" title="Instagram"><i class="fab fa-instagram">‌​&nbsp;</i></a></li>
+    </ul>
+  </div>
+  
+</div>
 
 {% if page.sidebar_first %}
   <aside role="complementary">

@@ -75,7 +75,7 @@
   font-weight: 900; }
 
 html {
-  font-size: 18px; }
+  font-size: 16px; }
 
 body {
   font-size: 1em;
@@ -84,6 +84,8 @@ body {
   color: #292929; }
   body.overlay {
     overflow: hidden; }
+  body.adminimal-admin-toolbar .se-pre-con {
+    display: none; }
 
 em {
   font-style: normal;
@@ -215,6 +217,47 @@ a:hover, a:focus {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
+
+#maintenance-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: table; }
+  #maintenance-wrapper .inner {
+    display: table-cell;
+    vertical-align: middle; }
+
+.maintenance-page {
+  text-align: center; }
+  .maintenance-page header {
+    margin-bottom: 3em; }
+    .maintenance-page header img {
+      max-width: 12em; }
+  .maintenance-page main {
+    font-size: 8em;
+    line-height: 2em;
+    font-family: "Manttulcuy", sans-serif;
+    color: #EFDED6; }
+  .maintenance-page .social-maintenance {
+    margin: 4em 0 0;
+    list-style: none;
+    padding: 0; }
+    .maintenance-page .social-maintenance li {
+      display: inline-block;
+      margin: 0 .5em; }
+      .maintenance-page .social-maintenance li a {
+        display: inline-block;
+        background-color: #E79482;
+        border-radius: 100%;
+        width: 2.5em;
+        height: 2.5em;
+        text-align: center; }
+        .maintenance-page .social-maintenance li a i {
+          color: #fff;
+          font-size: 1.3em;
+          position: relative;
+          top: .4em;
+          left: .1em;
+          text-align: center; }
 
 .every-woman {
   margin-top: 2em;
@@ -1496,6 +1539,10 @@ main {
     -ms-transform: rotate(-135deg);
     transform: rotate(-135deg); }
 
+@media only screen and (max-width: 1680px) {
+  #bestsellers-section {
+    overflow: hidden; } }
+
 @media only screen and (max-width: 1366px) {
   .mutedmoss-section {
     padding-bottom: 14em; }
@@ -1753,7 +1800,9 @@ main {
   main.cart-page {
     margin-top: 2em; }
   main.product-page {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .maintenance-page {
+    font-size: .5em; } }
 
 @media only screen and (max-width: 459px) {
   #block-checkoutprogress ol:before {
