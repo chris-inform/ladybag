@@ -85,8 +85,9 @@ jQuery(document).ready(function($) {
 	$('#block-views-block-similar-product-s-reference-block-1 .color-drop-wrap select').find('option:first').remove();
 	var selectDropdown = '<div id="color-drop"><label>Select Color</label></div>';
 	$('.commerce-order-item-variation-cart-form-form').before(selectDropdown);
-	$('#block-views-block-similar-product-s-reference-block-1 .color-drop-wrap').appendTo($('#color-drop'));
+	$('#block-views-block-similar-product-s-reference-block-1 .color-drop-wrap select').appendTo($('#color-drop'));
 	$('#color-drop select').prepend('<option selected>'+$('.field-name-field-color').text()+'</option>');
+
 
 	//out of stock button
 	if( $('.oos').length ) {

@@ -673,6 +673,7 @@ a:hover, a:focus {
         padding-left: .5em;
         text-decoration: none;
         z-index: 2;
+        text-shadow: 1px 2px 2px white;
         position: relative; }
       #our-products-section .views-field-nothing .title .bar,
       #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar {
@@ -904,7 +905,8 @@ a:hover, a:focus {
 .product-page .views-field-field-featured-image {
   margin-bottom: .5em; }
   .product-page .views-field-field-featured-image a {
-    display: block; }
+    display: block;
+    border: 1px solid #ebebeb; }
     .product-page .views-field-field-featured-image a:hover, .product-page .views-field-field-featured-image a:focus {
       outline: none; }
 
@@ -1297,6 +1299,8 @@ a:hover, a:focus {
 .commerce-product--type-bag .group-left {
   padding-right: 2em;
   width: 40%; }
+  .commerce-product--type-bag .group-left .slick-slide:active, .commerce-product--type-bag .group-left .slick-slide:focus, .commerce-product--type-bag .group-left div:active, .commerce-product--type-bag .group-left div:focus, .commerce-product--type-bag .group-left img:active, .commerce-product--type-bag .group-left img:focus {
+    outline: none; }
   .commerce-product--type-bag .group-left .slick-dots {
     text-align: center;
     padding: 0;
@@ -1364,6 +1368,8 @@ a:hover, a:focus {
 
 .commerce-product--type-bag #color-drop {
   margin-right: 1em; }
+  .commerce-product--type-bag #color-drop option:empty {
+    display: none; }
 
 .commerce-product--type-bag .field-details {
   clear: both;
