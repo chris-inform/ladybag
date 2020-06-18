@@ -135,4 +135,17 @@ jQuery(document).ready(function($) {
 jQuery(window).on("load", function($) {
 	// Animate loader off screen
 	jQuery(".se-pre-con").fadeOut("slow");
+
+	jQuery.instagramFeed({
+        'username': 'ladybag_mnl',
+        'container': "#instagram-feed",
+        'display_profile': false,
+        'display_biography': false,
+        'display_gallery': true,
+        'callback': null,
+        'styling': true,
+        'items': 4,
+        'items_per_row': 4,
+        'margin': 1 
+    });
 });

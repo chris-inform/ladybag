@@ -592,6 +592,7 @@ a:hover, a:focus {
     background-color: #A1B5B6; }
   #bestsellers-section .left img {
     position: relative;
+    width: 100%;
     left: -1.5em; }
   #bestsellers-section .right .inner {
     padding-left: 1em; }
@@ -1486,6 +1487,9 @@ main {
         -ms-transition: all 0.125s ease-in-out;
         -o-transition: all 0.125s ease-in-out;
         transition: all 0.125s ease-in-out; }
+
+#instagram-feed {
+  overflow: hidden; }
 
 #mobile-burg-menu {
   display: none;

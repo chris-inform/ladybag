@@ -9,6 +9,7 @@ gulp.task('scripts', function () {
 
     gulp.src([
             'js/vendor/bootstrap.bundle.min.js',
+            'js/vendor/jquery.instagramFeed.min.js',
             'js/main.js'
             ])
 	.pipe(concat('app.js'))
