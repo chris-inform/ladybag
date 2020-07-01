@@ -928,6 +928,9 @@ a {
 					outline: none;
 				}
 			}
+			&:focus {
+				outline: none;
+			}
 			&:before {
 				font-family: "Font Awesome 5 Pro";
 				font-weight: 300;
@@ -1012,6 +1015,54 @@ a {
 	height: 18em;
 	background: url(../images/banner_products.jpg) no-repeat 0 0;
 	background-size: cover;
+}
+#banner {
+	position: relative;
+	.slick-next {
+		right: 0;
+		&:before {
+			content: '\f054';
+		}
+	}
+	.slick-prev {
+		left: 0;
+		&:before {
+			content: '\f053';
+		}
+	}
+	.slick-prev,
+	.slick-next {
+		background-color: rgba(0,0,0,.3);
+		text-indent: -1000px;
+		overflow: hidden;
+		display: inline-block;
+		border: none;
+		position: absolute;
+		top: 0;
+		width: 2.9em;
+		height: 100%;
+		padding: 0;
+		line-height: 2.9em;
+		opacity: .5;
+		@include transition(all .125s ease-in-out);
+		&:hover,
+		&:active,
+		&:focus {
+			border: none;
+			outline: none;
+			opacity: 1;
+		}
+		&:before {
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 300;
+			font-size: 2em;
+			text-indent: 0;
+			position: absolute;
+			top: 44%;
+			left: .4em;
+			color: darken($color-white,10%);
+		}
+	}
 }
 #block-tinycuervo-page-title {
 	margin-bottom: 2em;

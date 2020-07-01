@@ -777,6 +777,8 @@ a:hover, a:focus {
     line-height: normal; }
     #our-clients-section .slick__arrow button:hover:focus {
       outline: none; }
+    #our-clients-section .slick__arrow button:focus {
+      outline: none; }
     #our-clients-section .slick__arrow button:before {
       font-family: "Font Awesome 5 Pro";
       font-weight: 300;
@@ -844,6 +846,53 @@ a:hover, a:focus {
   height: 18em;
   background: url(../images/banner_products.jpg) no-repeat 0 0;
   background-size: cover; }
+
+#banner {
+  position: relative; }
+  #banner .slick-next {
+    right: 0; }
+    #banner .slick-next:before {
+      content: '\f054'; }
+  #banner .slick-prev {
+    left: 0; }
+    #banner .slick-prev:before {
+      content: '\f053'; }
+  #banner .slick-prev,
+  #banner .slick-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-indent: -1000px;
+    overflow: hidden;
+    display: inline-block;
+    border: none;
+    position: absolute;
+    top: 0;
+    width: 2.9em;
+    height: 100%;
+    padding: 0;
+    line-height: 2.9em;
+    opacity: .5;
+    -webkit-transition: all 0.125s ease-in-out;
+    -moz-transition: all 0.125s ease-in-out;
+    -ms-transition: all 0.125s ease-in-out;
+    -o-transition: all 0.125s ease-in-out;
+    transition: all 0.125s ease-in-out; }
+    #banner .slick-prev:hover, #banner .slick-prev:active, #banner .slick-prev:focus,
+    #banner .slick-next:hover,
+    #banner .slick-next:active,
+    #banner .slick-next:focus {
+      border: none;
+      outline: none;
+      opacity: 1; }
+    #banner .slick-prev:before,
+    #banner .slick-next:before {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 300;
+      font-size: 2em;
+      text-indent: 0;
+      position: absolute;
+      top: 44%;
+      left: .4em;
+      color: #e6e6e6; }
 
 #block-tinycuervo-page-title {
   margin-bottom: 2em; }
