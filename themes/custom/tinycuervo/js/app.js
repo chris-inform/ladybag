@@ -141,6 +141,15 @@ jQuery(document).ready(function($) {
 
 });
 
+jQuery(window).on('scroll', function(){
+    var scroll = jQuery(window).scrollTop();
+    if(scroll > jQuery('#header').outerHeight(true)){
+        jQuery('#header').addClass('scrolled');
+    } else{
+        jQuery('#header').removeClass('scrolled');
+    }
+});
+
 jQuery(window).on("load", function($) {
 	// Animate loader off screen
 	jQuery(".se-pre-con").fadeOut("slow");
@@ -153,8 +162,8 @@ jQuery(window).on("load", function($) {
         'display_gallery': true,
         'callback': null,
         'styling': true,
-        'items': 4,
-        'items_per_row': 4,
-        'margin': 1 
+        'items': 2,
+        'items_per_row': 2,
+        'margin': 2
     });
 });

@@ -9,3 +9,51 @@
 		}
 	}
 }
+#banner {
+	padding-left: 1em;
+	padding-right: 1em;
+	&:before {
+		top: 0;
+	    font-size: 10px;
+	    background-size: 100%;
+	    left: -5em;
+	}
+	&:after {
+		font-size: 10px;
+	    right: -5em;
+	    top: -16em;
+	    background-size: 100%;
+	}
+}
+.every-woman {
+	line-height: normal;
+}
+.about-section {
+	padding-bottom: 3em;
+	.right .inner {
+		padding: 0;
+	}
+	.left .inner {
+		font-size: 10px;
+	}
+	.left .about_photo_doodle {
+		background-size: 100%;
+	}
+}
+#celeb-pick {
+	.left .inner {
+		padding-top: 2em;
+	}
+	.right {
+		padding-left: 4em;
+		.doodle-2 {
+			font-size: 8px;
+			left: 1em;
+		}
+	}
+	.doodle-1 {
+		font-size: 10px;
+		left: -1em;
+		bottom: 40em;
+	}
+}

@@ -1,6 +1,6 @@
 <div class="layout-container homepage">
 
-  <header id="header" role="banner" class="home">
+  <header id="header" role="banner" class="home fixed-top">
     <div class="site-container h-100">
       <div class="row h-100">
         <div class="col-sm-4 col-3 align-self-center">
@@ -29,31 +29,79 @@
     </div>
     <div class="layout-content">
         {#{ page.content }#}
-      <div class="site-container">
+      <div class="site-container" id="banner-wrapper">
         <div id="banner">
           {{ drupal_view('banner', 'block_1') }}
         </div>
         <div class="every-woman">
-          Get a grip or strap it on; it's every woman's evening <strong>essential.</strong>
+          The day-to-night clutch every girl should have
         </div>
       </div>
       <div class="mutedmoss-section">
         <div id="about_us" class="about-section">
-          <h2>{{ 'Hello'|t }}</h2>
-          {{ drupal_entity('block_content', '2') }}
+          <div class="site-container">
+            <div class="row">
+              <div class="left col-xl-6 col-lg-12 order-xl-1 order-lg-2 order-sm-2 order-2 align-self-center">
+                <div class="inner">
+                  <div class="about_photo_a">
+                    <img src="{{ base_path ~ directory }}/images/AboutUsa.jpg" alt="img-fluid">
+                  </div>
+                  <div class="about_photo_b">
+                    <img src="{{ base_path ~ directory }}/images/AboutUsb.jpg" alt="img-fluid">
+                  </div>
+                  <div class="about_photo_doodle"></div>
+                </div>
+              </div>
+              <div class="right col-xl-6 col-lg-12 order-xl-2 order-lg-1 order-sm-1 order-1 align-self-center">
+                <div class="inner">
+                  {{ drupal_entity('block_content', '2') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="celeb-pick">
+          <div class="celeb-pick-inner">
+            <div class="site-container">
+              <div class="doodle-1"></div>
+              <div class="left">
+                <div class="inner">
+                  <h1>{{ 'Blogger pick of the month'|t }}</h1>
+                  <p>Don't you just love taking fashion inspo from your favorite bloggers?</p>
+                  <p>Check out how our featured blogger chose to style her outfit with our clutch.</p>
+                </div>
+              </div>
+              <div class="right">
+                <div class="doodle-2"></div>
+                <div class="inner">
+                  <div class="left-side">
+                    <div class="celeb-name">Camille Co</div>
+                    <img src="{{ base_path ~ directory }}/images/CamilleInstagram.jpg" alt="img-fluid">
+                    <p>Camille adds a touch of elegance to her date night look with our silver clutch.</p>
+                  </div>
+                  <div class="right-side">
+                    <div class="small-pic">
+                      <img src="{{ base_path ~ directory }}/images/CamilleCo2.jpg" alt="img-fluid">
+                    </div>
+                    <div class="large-pic">
+                      <img src="{{ base_path ~ directory }}/images/CamilleCo.jpg" alt="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-extension"></div>
         </div>
         {# Bestseller block #}
         <div id="bestsellers-section">
-          <div class="row">
-            <div class="col-lg-4 col-sm-4 left align-self-center">
-              {{ drupal_entity('block_content', '3') }}
+          <div class="site-container">
+            <div class="left-doodle"></div>
+            <div class="inner">
+              <h4>{{ 'Our best-sellers'|t }}</h4>
+              {{ drupal_view('bestsellers', 'block_1') }}
             </div>
-            <div class="col-lg-8 col-sm-8 right align-self-center">
-              <div class="inner">
-                <h4>{{ 'Our Bestsellers'|t }}</h4>
-                {{ drupal_view('bestsellers', 'block_1') }}
-              </div>
-            </div>
+            <div class="right-doodle"></div>
           </div>
         </div>
         <div class="bg-section"></div>
@@ -64,20 +112,32 @@
       </div>
       <div id="our-clients-section">
         <div class="site-container">
-          <h2>{{ 'Our Clients'|t }}</h2>
+          <div class="doodle-1"></div>
+          <div class="doodle-2"></div>
+          <h2>{{ 'Our customers'|t }}</h2>
           {{ drupal_view('clients', 'block_1') }}
         </div>
       </div>
       <div id="models-section">
+        <div class="doodle-3"></div>
         <div class="site-container">
-          <div id="instagram-feed"> 
-          </div>
-          <div class="instagram-section">
-            <div class="ig-logo"></div>
-            <span>Follow us on Instagram</span>
-            <div class="userhandle"><a target="_blank" href="https://www.instagram.com/ladybag_mnl/">@ladybag_mnl</a></div>
+          <div class="row">
+            <div class="col-lg-6 left align-self-center">
+              <div class="inner">
+                <h2>{{ 'Let&rsquo;s get social!'|t }}</h2>
+                <div class="userhandle"><a target="_blank" href="https://www.instagram.com/ladybag_mnl/">@ladybag_mnl</a></div>
+              </div>
+            </div>
+            <div class="col-lg-6 right align-self-center">
+              <div class="inner">
+                <div id="instagram-feed"> 
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="doodle-1"></div>
+        <div class="doodle-2"></div>
       </div>
 
       {% if page.footer %}

@@ -117,6 +117,13 @@ class ProductVariationGeneratedTitleTest extends CommerceKernelTestBase {
     $variation = $this->reloadEntity($variation);
     $this->assertEquals($variation->label(), $product->label());
 
+    // When a product title is updated, variation titles should also be updated.
+    $product->setTitle('My Updated Product')
+      ->save();
+    /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $variation */
+    $variation = $this->reloadEntity($variation);
+    $this->assertEquals($variation->label(), $product->label());
+
     // With attribute values, the variation title should be the product plus all
     // of its attributes.
     $color_black = ProductAttributeValue::create([
@@ -132,6 +139,13 @@ class ProductVariationGeneratedTitleTest extends CommerceKernelTestBase {
     $variation->save();
 
     $this->assertNotEquals($variation->label(), $product->label());
+    $this->assertEquals($variation->label(), sprintf('%s - %s', $product->label(), $color_black->label()));
+
+    $product->setVariations([$variation]);
+    $product->setTitle('Another Product Title');
+    $product->save();
+    /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $variation */
+    $variation = $this->reloadEntity($variation);
     $this->assertEquals($variation->label(), sprintf('%s - %s', $product->label(), $color_black->label()));
   }
 

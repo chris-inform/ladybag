@@ -1,5 +1,5 @@
 #bestsellers-section {
-	overflow: hidden;
+	/*overflow: hidden;
 	padding: 0;
 	background: rgb(161,181,182);
 	background: linear-gradient(180deg, rgba(161,181,182,1) 0%, rgba(161,181,182,1) 85%, rgba(243,243,243,1) 85%, rgba(243,243,243,1) 100%);
@@ -20,6 +20,27 @@
 				padding-left: 0 !important;
 			}
 		}
+	}*/
+}
+#celeb-pick {
+	.right {
+		.right-side .large-pic {
+			width: auto;
+			height: auto;
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		.doodle-2 {
+			font-size: 12px;
+			background-size: 100%;
+		}
+	}
+	.doodle-1 {
+	    font-size: 13px;
+	    background-size: 100%;
+	}
+	.site-container {
+		padding: 0;
 	}
 }
 #our-products-section {
@@ -29,6 +50,9 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.doodle-2 {
+		right: -2em;
+	}
 }
 #our-clients-section {
 	.slick__arrow {
@@ -37,6 +61,10 @@
 	.views-element-container {
     	padding-left: 2em;
     	padding-right: 2em;
+	}
+	.doodle-2 {
+		right: -3.1em;
+		bottom: -3em;
 	}
 }
 .product-page {

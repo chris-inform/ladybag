@@ -125,4 +125,12 @@ interface ProductInterface extends ContentEntityInterface, EntityChangedInterfac
    */
   public function getDefaultVariation();
 
+  /**
+   * Gets the variation type for this product.
+   *
+   * @return \Drupal\commerce_product\Entity\ProductVariationTypeInterface
+   *   The variation type for this product.
+   */
+  public function getVariationType();
+  
 }

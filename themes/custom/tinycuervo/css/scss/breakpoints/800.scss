@@ -1,27 +1,9 @@
 .mutedmoss-section {
-	padding: 1.8em 0 0;
 	.bg-section {
 		display: none;
 	}
 }
-.about-section {
-	max-width: 100%;
-	padding: 5em 1em 3.5em;
-	text-align: center;
-	p {
-		text-align: left;
-		&:last-child {
-			text-align: center;
-		}
-	}
-	h2 {
-		@include rotate(0deg);
-		top: -.45em;
-		left: .2em;
-		font-size: 6em;
-	}
-}
-#bestsellers-section {
+/*#bestsellers-section {
 	background-color: #A1B5B6;
 	padding-left: 1.2em;
 	padding-top: 1em;
@@ -40,20 +22,25 @@
 			padding-right: 1em;
 		}
 	}
-}
-.about-section,
-#bestsellers-section {
-	position: relative;
-	top: auto;
-	left: auto;
-	bottom: auto;
-	right: auto;
+}*/
+#models-section {
+	.doodle-3 {
+		display: none;
+	}
+	.left {
+		text-align: center;
+		.inner {
+			padding: 0;
+		}
+	}
+	.userhandle {
+		text-align: center;
+	}
 }
 #block-tinycuervo-main-menu {
 	display: none;
 }
 #header {
-	box-shadow: 0px 4px .2em $color-lightgray;
 	margin-bottom: 2em;
 	&.single-prod-page-header {
 		margin-bottom: 0;
@@ -62,7 +49,7 @@
 #mobile-burg-menu {
 	display: block;
 }
-#our-products-section {
+/*#our-products-section {
 	padding-top: 3em;
 	h4 {
 		margin-bottom: 2em;
@@ -87,7 +74,7 @@
 	.views-field-field-image {
 		margin-bottom: 1.66em;
 	}
-}
+}*/
 #footer {
 	margin-top: 2em;
 	padding: 0;

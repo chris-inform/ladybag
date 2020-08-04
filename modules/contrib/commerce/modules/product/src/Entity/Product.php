@@ -265,6 +265,17 @@ class Product extends CommerceContentEntityBase implements ProductInterface {
   /**
    * {@inheritdoc}
    */
+  public function getVariationType() {
+    /** @var \Drupal\commerce_product\Entity\ProductTypeInterface $product_type */
+    $product_type = $this->entityTypeManager()->getStorage('commerce_product_type')
+      ->load($this->bundle());
+    return $this->entityTypeManager()->getStorage('commerce_product_variation_type')
+      ->load($product_type->getVariationTypeId());
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function preSave(EntityStorageInterface $storage) {
     parent::preSave($storage);
 
@@ -284,10 +295,19 @@ class Product extends CommerceContentEntityBase implements ProductInterface {
   public function postSave(EntityStorageInterface $storage, $update = TRUE) {
     parent::postSave($storage, $update);
 
-    // Ensure there's a back-reference on each product variation.
+    // If the product title has changed and variation titles are automatically
+    // generated, we need to resave all the variations to force an update.
+    $resave_variations = FALSE;
+    $title_changed = isset($this->original) && $this->getTitle() !== $this->original->getTitle();
+    if ($title_changed && !empty($this->variations) && $this->getVariationType()->shouldGenerateTitle()) {
+      $resave_variations = TRUE;
+    }
+
+    // Ensure there's a back-reference on each product variation and variation
+    // titles are synchronized with the product title.
     foreach ($this->variations as $item) {
       $variation = $item->entity;
-      if ($variation->product_id->isEmpty()) {
+      if ($resave_variations || $variation->product_id->isEmpty()) {
         $variation->product_id = $this->id();
         $variation->save();
       }

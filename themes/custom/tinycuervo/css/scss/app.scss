@@ -43,6 +43,21 @@
     src: url(../fonts/fa-brands-400.eot);
     src: url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../fonts/fa-brands-400.svg#fontawesome) format("svg");
 }
+@font-face {
+    font-family: 'dementorregular';
+    src: url('../fonts/dementor-webfont.woff2') format('woff2'),
+         url('../fonts/dementor-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'abril_fatfaceregular';
+    src: url('../fonts/abrilfatface-regular-webfont.woff2') format('woff2'),
+         url('../fonts/abrilfatface-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 .fab {
     font-family: Font Awesome\ 5 Brands;
 }
@@ -112,17 +127,20 @@ $color-lightgray: #F3F3F3;
 $color-coral: #E79482;
 $color-sand: #D5B8AA;
 $color-deeptaupe: #8B6654;
-$color-blush: #EFDED6;
+$color-blush: #EDE4DF;
 $color-mutedmoss: #A1B5B6;
-$color-ladybagpink: #EF2E71;
+$color-ladybagpink: #F6C9C9;
 $color-success: #69A37B;
 $color-error: #CE5F44;
+$color-brown: #C59C85;
 
 $font-lato-light: 'latolight', sans-serif;
 $font-lato-reg: 'latoregular', sans-serif;
 $font-lato-bold: 'latobold', sans-serif;
 $font-lato-italic: 'latoitalic', sans-serif;
 $font-mant: 'Manttulcuy', sans-serif;
+$font-dementor: 'dementorregular', sans-serif;
+$font-abril: 'abril_fatfaceregular', sans-serif;
 
 html {
 	font-size: 16px;
@@ -132,13 +150,21 @@ body {
 	line-height: 1.375em;
 	font-family: $font-lato-reg;
 	color: $color-charcoal;
+	padding-top: 5.75em;
 	&.overlay {
 		overflow: hidden;
 	}
 	&.adminimal-admin-toolbar {
+		padding-top: 0;
+		#header.fixed-top {
+			position: relative !important;
+		}
 		.se-pre-con {
 			display: none;
 		}
+	}
+	&.page-node-9 {
+		background-color: $color-blush;
 	}
 }
 em {
@@ -149,10 +175,14 @@ strong {
 	font-weight: normal;
 	font-family: $font-lato-bold;
 }
+.cart-offcanvas {
+	z-index: 1032;
+}
 .btn {
 	border-radius: 1.94em;
-	font-size: .9em;
+	font-size: 1em;
 	width: 12.5em;
+	padding: .65em .75em;
 	@include transition(all .125s ease-in-out);
 	&.btn-default {
 		background-color: $color-charcoal;
@@ -169,12 +199,14 @@ strong {
 	}
 	&.btn-primary {
 		background-color: $color-white;
-		color: $color-charcoal;
+		color: $color-brown;
 		text-transform: uppercase;
 		border-color: $color-white;
+		font-family: $font-lato-bold;
 		&:hover {
-			background-color: $color-coral;
-			border-color: $color-coral;
+			background-color: $color-brown;
+			border-color: $color-brown;
+			color: $color-white;
 		}
 		&.disabled {
 			opacity: .7;
@@ -229,17 +261,33 @@ a {
 .bold {
 	font-family: $font-lato-bold;
 }
+.layout-container.homepage {
+	background-color: $color-blush;
+}
 #header {
 	height: 5.625em;
 	/*margin-bottom: .3em;*/
 	margin-bottom: 4em;
+	@include transition(background-color .125s ease-in-out);
 	&.product-page-header {
 		margin-bottom: 0;
+	}
+	&.scrolled {
+		background-color: $color-white;
+	}
+	&.fixed-top {
+		z-index: 20 !important;
 	}
 }
 .homepage {
 	#header,#footer {
 		margin: 0;
+	}
+	#footer {
+		#block-footercontnet {
+			overflow: hidden;
+		}
+		position: relative;
 	}
 }
 .no-js #loader { display: none;  }
@@ -327,11 +375,12 @@ a {
 	}
 }
 .every-woman {
-	margin-top: 2em;
-	margin-bottom: 2em;
+	font-family: $font-dementor;
+	margin-top: 1em;
+	margin-bottom: .5em;
 	text-align: center;
-	font-size: 1.55em;
-	color: $color-charcoal;
+	font-size: 3.6em;
+	color: $color-black;
 }
 .breadcrumb {
 	background-color: transparent;
@@ -377,7 +426,7 @@ a {
 	}
 }
 .mutedmoss-section {
-	position: relative;
+	/*position: relative;
 	padding-top: 12.3em;
 	padding-bottom: 18em;
 	background: rgb(255,255,255);
@@ -386,48 +435,60 @@ a {
 		background-color: $color-mutedmoss;
 		width: 100%;
 		height: 31.11em;
-	}
+	}*/
 }
 .about-section {
-	max-width: 77.65em;
-	position: absolute;
-	top: 0;
-	/*right: 0;*/
-	left: 50%;
-	margin-left: -24.8em;
-	background-color: $color-blush;
-	color: $color-charcoal;
-	padding: 4em 18.8em 4em 6em;
-	h2 {
-		font-family: $font-mant;
-		color: #637070;
-		margin: 0;
-		font-size: 8.33em;
-		@include rotate(-90deg);
-		position: absolute;
-		top: .6em;
-		line-height: 1em;
-		left: -.9em;
-	}
+	padding: 2em 2em 5em;
 	.title {
 		display: inline-block;
-		padding-bottom: .35em;
-		color: $color-ladybagpink;
-		font-size: 1.22em;
-		font-family: $font-lato-bold;
-		border-bottom: .22em solid $color-ladybagpink;
-		margin-bottom: .85em;
+		font-family: $font-abril;
+		color: $color-brown;
+		font-size: 2.4em;
+		line-height: normal;
+		position: relative;
+		left: -.45em;
+		margin-bottom: .25em;
 	}
 	.btn {
-		margin-top: 1.2em;
-		i {
-			margin-left: .5em;
-			font-size: 1.4em;
-			vertical-align: middle;
-		}
+		margin-top: 1em;
 	}
 	p:last-child {
 		margin-bottom: 0;
+	}
+	.left {
+		.inner {
+			position: relative;
+		}
+		img {
+			border: .75em solid $color-white;
+		}
+		.about_photo_a {
+			width: 25em;
+			padding-bottom: 3em;
+			@include transform(rotate(6deg));
+		}
+		.about_photo_b {
+			width: 16em;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include transform(rotate(-4deg));
+		}
+		.about_photo_doodle {
+			background: url(../images/vector_doodle2.svg) no-repeat 0 0;
+			width: 11.18em;
+	    height: 15.06em;
+	    position: absolute;
+	    bottom: -2em;
+	    left: -2.6em;
+		}
+	}
+	.right {
+		.inner {
+			padding-left: 3em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
 	}
 }
 #block-tinycuervo-main-menu {
@@ -617,10 +678,10 @@ a {
   }
 }
 #footer {
+	overflow: hidden;
 	margin-top: 4em;
 	background-color: $color-blush;
 	padding: 2.3em 0;
-	overflow: hidden;
 	.footer-col-1,
 	.footer-col-2,
 	.footer-col-3,
@@ -629,7 +690,7 @@ a {
 		float: left;
 	}
 	.footer-col-1 {
-		border-right: 1px solid $color-sand;
+		border-right: 1px solid #C59C85;
 		width: 23%;
 		padding: 2.3em 0;
 	}
@@ -648,7 +709,7 @@ a {
 	.footer-logo {
 		margin-bottom: .5em;
 		img {
-			max-width: 12.44em;
+			max-width: 9em;
 		}
 	}
 	.copyright {
@@ -657,20 +718,21 @@ a {
 	}
 	h5 {
 		white-space: nowrap;
-		color: #637070;
-		text-transform: uppercase;
+		color: #4F4F4F;
+		font-family: $font-abril;
 		margin-bottom: .7em;
+		font-size: .9em;
 		i {
-			color: $color-sand;
-			font-size: 1.125em;
+			color: #4F4F4F;
+			font-size: 1em;
 			margin-right: .3em;
 		}
 	}
 	.inner {
 		a {
 			display: block;
-			color: #8B6655;
-			font-size: .875em;
+			color: $color-brown;
+			font-size: .9em;
 		}
 		.social-icons {
 			margin-top: 1.2em;
@@ -684,7 +746,7 @@ a {
 				text-align: center;
 				font-size: 1em;
 				&:first-child {
-					margin-right: .75em;
+					margin-right: .5em;
 				}
 				i {
 					position: relative;
@@ -698,92 +760,139 @@ a {
 }
 #bestsellers-section {
 	/*overflow: hidden;*/
-	max-width: 80em;
-	position: absolute;
+	/*max-width: 80em;*/
+	/*position: absolute;
 	margin-left: -32.5em;
 	left: 50%;
-	bottom: 0;
-	img {
-		max-width: 100%;
-		height: auto;
+	bottom: 0;*/
+	padding-top: 1em;
+	background-color: #4490A0;
+	.site-container {
+		position: relative;
+		top: 8em;
 	}
-	.left {
-		p {
-			margin: 0;
-		}
-		> div {
-			padding: 1.5em 0;
-			background-color: $color-mutedmoss;
-		}
-		img {
+	.left-doodle {
+		background: url(../images/vector_Leaves.svg) no-repeat 0 0;
+		width: 10.81em;
+		height: 12.12em;
+		position: absolute;
+		bottom: .5em;
+		left: -3.65em;
+		z-index: 3;
+	}
+	.right-doodle {
+		background: url(../images/vector_leaves2.svg) no-repeat 0 0;
+		width: 13.62em;
+		height: 22.62em;
+		position: absolute;
+		top: 0;
+		right: -7.8em;
+		z-index: 1;
+	}
+	.inner {
+		.views-element-container {
 			position: relative;
-			width: 100%;
-			left: -1.5em;
+			z-index: 2;
+			footer {
+				font-family: $font-dementor;
+				color: $color-black;
+				font-size: 4em;
+				position: absolute;
+				bottom: 1.3em;
+				right: -.1em;
+			}
 		}
 	}
-	.right {
-		.inner {
-			padding-left: 1em;
+	.slick__arrow {
+		padding: .75em;
+		text-align: right;
+	}
+	.slick-arrow {
+		border: none;
+		outline: none;
+		background: none;
+		color: $color-charcoal;
+		font-size: 3em;
+		&:before {
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 300;
 		}
-		.slick__arrow {
-			margin-left: 1.8em;
+		&.slick-disabled {
+			opacity: 1;
 		}
-		.slick-arrow {
-			border: none;
-			outline: none;
-			background: none;
-			color: $color-charcoal;
-			font-size: 2.5em;
+		&.slick-next {
 			&:before {
-				font-family: "Font Awesome 5 Pro";
-				font-weight: 300;
-			}
-			&.slick-disabled {
-				opacity: .6;
-			}
-			&.slick-next {
-				&:before {
-					content: '\f178';
-				}
-			}
-			&.slick-prev {
-				margin-right: .5em;
-				&:before {
-					content: '\f177';
-				}
+				content: '\f178';
+				color: $color-charcoal;
 			}
 		}
-		.slick-slide {
-			padding: 1.8em;
-			.slide__content {
-				background-color: $color-white;
-				padding: 1em;
+		&.slick-prev {
+			margin-right: .2em;
+			&:before {
+				color: $color-brown;
+				content: '\f177';
 			}
 		}
-		h4 {
-			margin-left: 1.8em;
-			font-size: 1.22em;
-			font-family: $font-lato-bold;
-			color: $color-white;
-			border-bottom: .22em solid $color-white;
-			display: inline-block;
-			padding-bottom: .2em;
+	}
+	.slick-slide {
+		padding: .75em;
+		.slide__content {
+			background-color: #F2F2F2;
+			padding: .85em;
 		}
+	}
+	h4 {
+		font-size: 2.4em;
+		font-family: $font-abril;
+		color: $color-white;
+		display: block;
+		margin-bottom: .75em;
+		text-align: center;
+	}
+}
+#our-products-section {
+	padding-top: 10em !important;
+	background-color: #EDE4DF !important;
+	.views-element-container {
+		position: relative;
+		.views-view-grid {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	.doodle-1 {
+		background: url(../images/vector_Flower.svg) no-repeat 0 0;
+		width: 17.81em;
+		height: 16.81em;
+		position: absolute;
+		top: 3em;
+		right: -6em;
+	}
+	.doodle-2 {
+		background: url(../images/vector_Leaves-1.svg) no-repeat 0 0;
+		width: 12.12em;
+		height: 10.75em;
+		position: absolute;
+		bottom: 15.5em;
+    right: -7em;
+	}
+	.views-field-nothing .img-wrap {
+		padding-top: 3em;
+		background-color: $color-white;
 	}
 }
 #our-products-section,
 #views-bootstrap-product-terms-home-page-1 {
+	clear: both;
 	background-color: $color-lightgray;
 	text-align: center;
 	padding-top: 6em;
 	padding-bottom: 4em;
 	h4 {
-		font-size: 1.22em;
-		font-family: $font-lato-bold;
+		font-size: 2.4em;
+		font-family: $font-abril;
 		color: $color-charcoal;
-		border-bottom: .22em solid $color-charcoal;
-		display: inline-block;
-		margin-bottom: 2.8em;
+		margin-bottom: 1.2em;
 	}
 	.views-element-container {
 		padding-left: 1em;
@@ -795,25 +904,25 @@ a {
 	.views-field-nothing {
 		margin-bottom: 2em;
 		.field-content > div {
-			background-color: $color-white;
+			background-color: #F2F2F2;
 			padding: 1.3em;
 			box-shadow: 0px 3px 6px #91919133;
 			position: relative;
 		}
 		.title {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -.2em;
+			left: -1.2em;
 			a {
-				color: $color-charcoal;
-				font-family: $font-mant;
+				color: $color-black;
+				font-family: $font-dementor;
 				font-size: 3em;
 				display: inline-block;
 				padding-top: .55em;
 				padding-left: .5em;
 				text-decoration: none;
 				z-index: 2;
-				text-shadow: 1px 2px 2px rgba(255, 255, 255, 1);
+				@include transform(rotate(-10deg));
 				position: relative;
 			}
 			.bar {
@@ -827,34 +936,35 @@ a {
 		}
 		.shop-now {
 			text-align: right;
-			padding-top: .8em;
-			padding-bottom: .5em;
+			padding-top: 1em;
 			a {
-				font-size: .9em;
-				color: $color-charcoal;
-				font-family: $font-lato-light;
+				font-size: 1em;
+				color: $color-brown;
+				font-family: $font-lato-bold;
 				text-decoration: none;
+				text-transform: uppercase;
 				&:after {
 					font-family: "Font Awesome 5 Pro";
 					font-weight: 300;
 					content: '\f178';
 					margin-left: .24em;
-					font-size: 1.2em;
+					font-size: 1.5em;
 					position: relative;
-					top: .18em;
+					top: .15em;
 				}
 			}
 		}
 	}
 	.more-link {
 		text-align: center;
+		margin-top: 1.5em;
 		a {
 			display: inline-block;
 			color: $color-white;
 			background-color: $color-charcoal;
 			text-transform: uppercase;
-			font-family: $font-lato-light;
-			font-size: .9em;
+			/*font-family: $font-lato-light;*/
+			font-size: 1em;
 			margin: 0 auto 1em;
 			padding: .7em 3em;
 			border-radius: 2em;
@@ -872,20 +982,36 @@ a {
 	padding: 0};
 
 #our-clients-section {
-	background: rgb(243,243,243);
-	background: linear-gradient(180deg, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 60%, rgba(231,148,130,1) 60%, rgba(231,148,130,1) 100%);
+	position: relative;
+	z-index: 3;
 	.site-container {
-		background-color: $color-blush;
+		background-color: $color-ladybagpink;
 		position: relative;
 	}
+	.doodle-1,
+	.doodle-2 {
+		position: absolute;
+		width: 8.62em;
+		height: 9.12em;
+	}
+	.doodle-1 {
+		background: url(../images/vector_doodle.svg) no-repeat 0 0;
+		left: -3.1em;
+		bottom: -1em;
+	}
+	.doodle-2 {
+		background: url(../images/vector_heart.svg) no-repeat 0 0;
+		right: 2em;
+		bottom: -1.8em;
+	}
 	h2 {
-		font-family: $font-mant;
-		color: $color-ladybagpink;
-		font-size: 4.5em;
+		font-family: $font-abril;
+		color: $color-charcoal;
+		font-size: 2.8em;
 		position: absolute;
 		margin: 0;
-		left: .7em;
-		top: -.7em;
+		left: 1.5em;
+		top: -.65em;
 	}
 	.views-element-container {
 		padding: 4em 10em 2em;
@@ -893,7 +1019,7 @@ a {
 	.slide__description {
 		text-align: center;
 		font-size: 1.22em;
-		color: #637070;
+		color: $color-charcoal;
 		p {
 			line-height: 1.4em;
 			margin: 0;
@@ -901,14 +1027,10 @@ a {
 		}
 	}
 	.views-field-title {
-		font-family: $font-lato-bold;
-		margin-top: 1.8em;
-		.field-content {
-			&:before {
-				content: '-';
-				margin-right: .5em;
-			}
-		}
+		font-family: $font-dementor;
+		margin-top: .65em;
+		line-height: normal;
+		font-size: 2.5em;
 	}
 	.slick__arrow {
 		button {
@@ -934,19 +1056,19 @@ a {
 			&:before {
 				font-family: "Font Awesome 5 Pro";
 				font-weight: 300;
-				color: $color-sand;
-				font-size: 2.5em;
+				color: $color-charcoal;
+				font-size: 2em;
 			}
 			&.slick-prev {
 				left: 5%;
 				&:before {
-					content: '\f137';
+					content: '\f177';
 				}
 			}
 			&.slick-next {
 				right: 5%;
 				&:before {
-					content: '\f138';
+					content: '\f178';
 				}
 			}
 		}
@@ -962,7 +1084,7 @@ a {
 			vertical-align: middle;
 			&.slick-active {
 				button {
-					background-color: $color-mutedmoss;
+					background-color: $color-charcoal;
 					width: .55em;
 					height: .55em;
 				}
@@ -972,7 +1094,7 @@ a {
 				display: block;
 				width: .4em;
 				height: .4em;
-				background: $color-sand;
+				background: $color-brown;
 				border-radius: 100%;
 				text-indent: -1000px;
 				overflow: hidden;
@@ -983,41 +1105,243 @@ a {
 	}
 }
 #models-section {
-	background-color: $color-coral;
-	padding: 3em 0;
-	text-align: center;
-	.instagram-section {
-		margin-top: 2em;
-		.ig-logo {
-			background: transparent url(../images/instagram.svg) no-repeat center;
-			background-size: auto 85%;
-			display: block;
-			width: 3.17em;
-			height: 3.17em;
-			background-color: $color-white;
+	margin-top: -7em;
+	background-color: $color-white;
+	padding: 11em 0 4em;
+	position: relative;
+	z-index: 2;
+	.doodle-3 {
+		position: absolute;
+		top: -22.7em;
+		left: 0;
+		background: url(../images/vector_flower3.svg) no-repeat top right;
+		width: 17em;
+		height: 22.7em;
+	}
+	.doodle-1 {
+		background: url(../images/ico_dashes.svg) no-repeat 0 0;
+		width: 2.56em;
+		height: 7.56em;
+		position: absolute;
+		bottom: -2em;
+		left: 3.2em;
+	}
+	.doodle-2 {
+		background: url(../images/vector_Flower.svg) no-repeat 0 0;
+		width: 8.81em;
+		height: 16.81em;
+		position: absolute;
+		bottom: -8.5em;
+		right: 0;
+	}
+	.left {
+		.inner {
+			padding-right: 6em;
+		}
+	}
+	h2 {
+		font-family: $font-abril;
+		font-size: 2.8em;
+		position: relative;
+		&:before {
+			content: '\f16d';
+			font-family: "Font Awesome 5 Brands";
+			font-weight: 400;
+			font-size: .65em;
+			background-color: #4490A0;
+			width: 1.5em;
+	    height: 1.5em;
+	    padding-top: .15em;
+			display: inline-block;
 			border-radius: 100%;
-			margin: 0 auto .5em;
-		}
-		span {
+			text-align: center;
 			color: $color-white;
-			font-size: .75em;
+			top: -.2em;
+			position: relative;
+			margin-right: .3em;
 		}
+	}
+	.userhandle {
+		text-align: right;
 		a {
 			display: inline-block;
-			margin-top: .5em;
-			color: $color-white;
-			font-size: 1.5em;
-			text-decoration: underline;
+			line-height: normal;
+			color: #4490A0;
+			font-family: $font-dementor;
+			font-size: 6em;
+			text-decoration: none;
 		}
 	}
 }
 .prod-banner {
 	height: 18em;
-	background: url(../images/banner_products.jpg) no-repeat 0 0;
+	background: url(../images/d_Product-BG_Pink.jpg) no-repeat 0 0;
 	background-size: cover;
+	&.prod-banner-2 {
+		background-image: url(../images/d_Product-BG_Blue.jpg);
+		margin-bottom: 5em;
+	}
+}
+#celeb-pick {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fffcf9+0,fffcf9+50,ede4df+51,ede4df+100 */
+	background: #fffcf9; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fffcf9 0%, #fffcf9 50%, #ede4df 51%, #ede4df 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #fffcf9 0%,#fffcf9 50%,#ede4df 51%,#ede4df 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #fffcf9 0%,#fffcf9 50%,#ede4df 51%,#ede4df 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcf9', endColorstr='#ede4df',GradientType=1 ); /* IE6-9 */
+	position: relative;
+	.bg-extension {
+  	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fffcf9+0,fffcf9+50,c59c85+51,c59c85+100 */
+  	background: #fffcf9; /* Old browsers */
+  	background: -moz-linear-gradient(left,  #fffcf9 0%, #fffcf9 50%, #c59c85 51%, #c59c85 100%); /* FF3.6-15 */
+  	background: -webkit-linear-gradient(left,  #fffcf9 0%,#fffcf9 50%,#c59c85 51%,#c59c85 100%); /* Chrome10-25,Safari5.1-6 */
+  	background: linear-gradient(to right,  #fffcf9 0%,#fffcf9 50%,#c59c85 51%,#c59c85 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcf9', endColorstr='#c59c85',GradientType=1 ); /* IE6-9 */
+		width: 100%;
+		height: 30em;
+		position: absolute;
+		bottom: -5.5em;
+		left: 0;
+  }
+	.celeb-pick-inner {
+		max-width: 120em;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		clear: both;
+	}
+	.site-container {
+		position: relative;
+	}
+	.doodle-1 {
+		background: url(../images/vector_Flower.svg) no-repeat 0 0;
+		width: 17.81em;
+		height: 16.81em;
+		position: absolute;
+		bottom: -11.2em;
+    /*right: 83.5em;*/
+    left: -6em;
+    z-index: 2;
+	}
+	.left {
+		background-color: #FFFCF9;
+		width: 51.32%;
+		position: relative;
+		height: 38em;
+		z-index: 1;
+		.inner {
+			/*padding: 4em 5em 20em 25em;*/
+			/*position: absolute;
+			top: 0;
+			right: 14.1%;*/
+			padding: 4em 2em 2.5em 2em;
+		}
+		h1 {
+			font-family: $font-abril;
+			font-size: 2.4em;
+			margin-bottom: .4em;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.right {
+		background-color: $color-brown;
+		/*width: 79.2%;*/
+		height: 30em;
+		position: absolute;
+    top: 13.5em;
+    width: 100%;
+    /*right: 0;*/
+    z-index: 3;
+    
+		.doodle-2 {
+			background: url(../images/vector_doodle2-1.svg) no-repeat 0 0;
+			width: 13.75em;
+			height: 20.12em;
+			position: absolute;
+			top: 4.5em;
+			left: -5.7em;
+		}
+		.inner {
+			position: relative;
+			padding-bottom: 5em;
+		}
+		.left-side {
+			width: 40%;
+			float: left;
+			text-align: right;
+			padding-right: 5em;
+			margin-top: 6em;
+			padding-left: 9em;
+			.celeb-name {
+				font-family: $font-dementor;
+				line-height: normal;
+				font-size: 4em;
+				color: $color-white;
+			}
+			img {
+				margin-top: .2em;
+				margin-bottom: .5em;
+			}
+			p {
+				color: $color-white;
+			}
+		}
+		.right-side {
+			width: 60%;
+			float: right;
+			position: relative;
+			min-height: 30em;
+			padding-bottom: 4em;
+			.small-pic {
+				position: absolute;
+				bottom: 7.8em;
+				left: 0;
+				width: 15.1em;
+				height: 16.8em;
+				z-index: 2;
+				img {
+					border: .65em solid $color-white;
+				}
+			}
+			.large-pic {
+				position: absolute;
+				bottom: 4.5em;
+				left: 12em;
+				width: 30em;
+				height: 39em;
+			}
+		}
+	}
 }
 #banner {
 	position: relative;
+	margin-top: .5em;
+	.views-element-container {
+		position: relative;
+		z-index: 2;
+		border: .75em solid $color-white;
+	}
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+	}
+	&:before {
+		top: 3em;
+		left: -6.1em;
+		width: 13.56em;
+		height: 21.12em;
+		background: url(../images/LeftDoodle.svg) no-repeat 0 0;
+	}
+	&:after {
+		top: -17em;
+		right: -5.9em;
+		width: 11.375em;
+		height: 50.12em;
+		background: url(../images/RightDoodle.svg) no-repeat 0 0;
+	}
 	.slick-next {
 		right: 0;
 		&:before {
@@ -1032,7 +1356,7 @@ a {
 	}
 	.slick-prev,
 	.slick-next {
-		background-color: rgba(0,0,0,.3);
+		background-color: rgba(255,255,255,.3);
 		text-indent: -1000px;
 		overflow: hidden;
 		display: inline-block;
@@ -1515,7 +1839,7 @@ a {
 		}
 		.fieldset-legend {
 			font-size: .65em;
-			color: $color-ladybagpink;
+			color: #EE2E70;
 		}
 	}
 }
@@ -1532,7 +1856,6 @@ a {
 		}
 	}
 	.form-item {
-		/*border: 1px solid red;*/
 		margin-bottom: 1.2em;
 		label, input, select {
 			display: block;
@@ -1582,7 +1905,7 @@ a {
 		}
 	}
 	a {
-		color: $color-ladybagpink;
+		color: #EE2E70;
 	}
 
 }
@@ -1907,16 +2230,17 @@ main {
   }
 }
 
-@media only screen and (max-width: 1680px) {
-	#bestsellers-section {
-		overflow: hidden;
+@media only screen and (max-width: 1638px) {
+	#celeb-pick .right .left-side {
+		padding-left: 5em;
+		padding-right: 5em;
 	}
 }
 
+@media only screen and (max-width: 1456px) {
+}
+
 @media only screen and (max-width: 1366px) {
-	.mutedmoss-section {
-		padding-bottom: 14em;
-	}
 	.site-container {
 		padding-left: 1em;
 		padding-right: 1em;
@@ -1924,21 +2248,114 @@ main {
 }
 
 @media only screen and (max-width: 1024px) {
-	.about-section {
-		right: 0;
-		left: auto;
-		max-width: 85%;
-		margin-left: 0;
-		padding: 4em 6em;
-	}
 	#bestsellers-section {
-		max-width: 100%;
-		left: auto;
-		margin-left: 0;
-		padding-left: 3em;
+		margin-top: -35em;
+		position: relative;
+		padding-top: 36em;
+		.site-container {
+			overflow: hidden;
+		}
 	}
-	.mutedmoss-section {
-		padding-bottom: 7em;
+	#our-products-section {
+		overflow: hidden;
+	}
+	#our-clients-section {
+		padding-left: 3em;
+		padding-right: 3em;
+		.site-container {
+			padding-top: 2em;
+		}
+		h2 {
+			position: relative;
+			top: auto;
+			left: auto;
+			text-align: center;
+		}
+	}
+	#banner-wrapper {
+		overflow: hidden;
+	}
+	.about-section {
+		p:last-child {
+			text-align: right;
+		}
+		.left .inner {
+			max-width: 30em;
+			margin: 3em auto 0;
+		}
+		.title {
+			left: 0;
+		}
+	}
+	#celeb-pick {
+		.doodle-1 {
+			bottom: 20em;
+			left: 2em;
+		}
+		.bg-extension {
+			display: none;
+		}
+		.left {
+			width: 100%;
+			height: auto;
+			padding-bottom: 10em;
+		}
+		.right {
+			height: auto;
+			background: none;
+			padding-left: 10em;
+			position: relative;
+	    top: 0;
+	    margin-top: -10em;
+	    .doodle-2 {
+	    	left: 2em;
+	    	z-index: 2;
+	    }
+			.inner {
+				background-color: $color-brown;
+				padding-bottom: 0;
+			}
+			.left-side,
+			.right-side {
+				width: 100%;
+				position: relative;
+				float: none;
+			}
+			.left-side {
+				text-align: center;
+				padding: 2em 2em 1em;
+				margin-top: 0;
+				img {
+					width: 20em;
+				}
+			}
+			.right-side {
+				padding-bottom: 2.5em;
+				.small-pic {
+					/*display: none;*/
+					bottom: -4em;
+					left: -3em;
+				}
+				.large-pic {
+					position: relative;
+					bottom: auto;
+					left: auto;
+					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+	#banner {
+		padding-left: 2em;
+		padding-right: 2em;
+		&:before {
+			top: -3em;
+		}
+		&:after {
+			top: -16em;
+		}
 	}
 	#footer {
 		.footer-logo {
