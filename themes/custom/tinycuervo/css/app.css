@@ -777,11 +777,33 @@ a:hover, a:focus {
       #our-products-section .views-field-nothing .title .bar,
       #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar {
         position: absolute;
-        top: 2.2em;
+        top: .75em;
         left: 0;
         display: inline-block;
         width: 8.61em;
-        height: .77em; }
+        height: 3em;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        opacity: .8; }
+        #our-products-section .views-field-nothing .title .bar.bar-1,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-1 {
+          background-image: url(../images/brush_silver.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-3,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-3 {
+          background-image: url(../images/brush_gold.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-4,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-4 {
+          background-image: url(../images/brush_rg.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-5,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-5 {
+          background-image: url(../images/brush_pink.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-6,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-6 {
+          background-image: url(../images/brush_white.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-7,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-7 {
+          background-image: url(../images/brush_black.png); }
     #our-products-section .views-field-nothing .shop-now,
     #views-bootstrap-product-terms-home-page-1 .views-field-nothing .shop-now {
       text-align: right;

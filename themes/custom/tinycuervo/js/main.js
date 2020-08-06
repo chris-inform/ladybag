@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
-	$('.bar').each(function() {
-		$(this).css('background-color', $(this).attr('data-bgcolor'));
-	});
+	// $('.bar').each(function() {
+	// 	$(this).css('background-color', $(this).attr('data-bgcolor'));
+	// });
 
 	$('.product-page .views-field-field-stock-level').find('.field-content').each(function() {
 		if( $(this)[0].innerText == "0" ) {
