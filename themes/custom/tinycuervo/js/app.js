@@ -152,7 +152,7 @@ jQuery(window).on('scroll', function(){
 
 jQuery(window).on("load", function($) {
 	// Animate loader off screen
-	jQuery(".se-pre-con").fadeOut("slow");
+	// jQuery(".se-pre-con").fadeOut("slow");
 
 	jQuery.instagramFeed({
         'username': 'ladybag_mnl',
