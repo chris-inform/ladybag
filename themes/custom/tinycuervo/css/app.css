@@ -307,7 +307,19 @@ a:hover, a:focus {
   margin-bottom: .5em;
   text-align: center;
   font-size: 3.6em;
-  color: #000; }
+  color: #000;
+  position: relative; }
+  .every-woman div {
+    position: relative;
+    z-index: 2; }
+  .every-woman img {
+    position: absolute;
+    top: .1em;
+    /*right: 3.5em;*/
+    left: 50%;
+    margin-left: -3em;
+    z-index: 1;
+    width: 9em; }
 
 .breadcrumb {
   background-color: transparent;
@@ -804,6 +816,18 @@ a:hover, a:focus {
         #our-products-section .views-field-nothing .title .bar.bar-7,
         #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-7 {
           background-image: url(../images/brush_black.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-8,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-8 {
+          background-image: url(../images/brush_grey.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-9,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-9 {
+          background-image: url(../images/brush_red.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-10,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-10 {
+          background-image: url(../images/brush_nude.png); }
+        #our-products-section .views-field-nothing .title .bar.bar-2,
+        #views-bootstrap-product-terms-home-page-1 .views-field-nothing .title .bar.bar-2 {
+          background-image: url(../images/brush_champagne.png); }
     #our-products-section .views-field-nothing .shop-now,
     #views-bootstrap-product-terms-home-page-1 .views-field-nothing .shop-now {
       text-align: right;
@@ -1066,7 +1090,7 @@ a:hover, a:focus {
     z-index: 2; }
   #celeb-pick .left {
     background-color: #FFFCF9;
-    width: 51.32%;
+    width: 57.32%;
     position: relative;
     height: 38em;
     z-index: 1; }
@@ -1102,24 +1126,29 @@ a:hover, a:focus {
       position: relative;
       padding-bottom: 5em; }
     #celeb-pick .right .left-side {
-      width: 40%;
+      width: 46%;
       float: left;
       text-align: right;
-      padding-right: 5em;
+      padding-right: 4em;
       margin-top: 6em;
       padding-left: 9em; }
       #celeb-pick .right .left-side .celeb-name {
         font-family: "dementorregular", sans-serif;
         line-height: normal;
-        font-size: 4em;
+        font-size: 6.5em;
+        text-align: center;
         color: #fff; }
+      #celeb-pick .right .left-side .celeb-handle {
+        color: #fff;
+        text-align: center;
+        margin-bottom: .5em; }
       #celeb-pick .right .left-side img {
         margin-top: .2em;
         margin-bottom: .5em; }
       #celeb-pick .right .left-side p {
         color: #fff; }
     #celeb-pick .right .right-side {
-      width: 60%;
+      width: 54%;
       float: right;
       position: relative;
       min-height: 30em;
@@ -1132,7 +1161,14 @@ a:hover, a:focus {
         height: 16.8em;
         z-index: 2; }
         #celeb-pick .right .right-side .small-pic img {
-          border: 0.65em solid #fff; }
+          border: 0.65em solid #fff;
+          background: #fff; }
+        #celeb-pick .right .right-side .small-pic p {
+          padding: .5em;
+          font-size: .9em;
+          line-height: normal;
+          margin-bottom: 0;
+          color: #fff; }
       #celeb-pick .right .right-side .large-pic {
         position: absolute;
         bottom: 4.5em;
@@ -2179,6 +2215,8 @@ main {
 			}
 		}
 	}*/ }
+  .every-woman img {
+    top: .75em; }
   #celeb-pick .right .right-side .large-pic {
     width: auto;
     height: auto;
@@ -2187,6 +2225,8 @@ main {
   #celeb-pick .right .doodle-2 {
     font-size: 12px;
     background-size: 100%; }
+  #celeb-pick .right .left-side .celeb-name {
+    font-size: 4em; }
   #celeb-pick .doodle-1 {
     font-size: 13px;
     background-size: 100%; }

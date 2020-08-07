@@ -381,6 +381,20 @@ a {
 	text-align: center;
 	font-size: 3.6em;
 	color: $color-black;
+	position: relative;
+	div {
+		position: relative;
+		z-index: 2;
+	}
+	img {
+		position: absolute;
+		top: .1em;
+		/*right: 3.5em;*/
+		left: 50%;
+		margin-left: -3em;
+		z-index: 1;
+		width: 9em;
+	}
 }
 .breadcrumb {
 	background-color: transparent;
@@ -954,6 +968,18 @@ a {
 				&.bar-7 {
 					background-image: url(../images/brush_black.png);	
 				}
+				&.bar-8 {
+					background-image: url(../images/brush_grey.png);	
+				}
+				&.bar-9 {
+					background-image: url(../images/brush_red.png);	
+				}
+				&.bar-10 {
+					background-image: url(../images/brush_nude.png);	
+				}
+				&.bar-2 {
+					background-image: url(../images/brush_champagne.png);	
+				}
 			}
 		}
 		.shop-now {
@@ -1247,7 +1273,7 @@ a {
 	}
 	.left {
 		background-color: #FFFCF9;
-		width: 51.32%;
+		width: 57.32%;
 		position: relative;
 		height: 38em;
 		z-index: 1;
@@ -1290,17 +1316,23 @@ a {
 			padding-bottom: 5em;
 		}
 		.left-side {
-			width: 40%;
+			width: 46%;
 			float: left;
 			text-align: right;
-			padding-right: 5em;
+			padding-right: 4em;
 			margin-top: 6em;
 			padding-left: 9em;
 			.celeb-name {
 				font-family: $font-dementor;
 				line-height: normal;
-				font-size: 4em;
+				font-size: 6.5em;
+				text-align: center;
 				color: $color-white;
+			}
+			.celeb-handle {
+				color: $color-white;
+				text-align: center;
+				margin-bottom: .5em;
 			}
 			img {
 				margin-top: .2em;
@@ -1311,7 +1343,7 @@ a {
 			}
 		}
 		.right-side {
-			width: 60%;
+			width: 54%;
 			float: right;
 			position: relative;
 			min-height: 30em;
@@ -1325,6 +1357,14 @@ a {
 				z-index: 2;
 				img {
 					border: .65em solid $color-white;
+					background: $color-white;
+				}
+				p {
+					padding: .5em;
+					font-size: .9em;
+					line-height: normal;
+					margin-bottom: 0;
+					color: $color-white;
 				}
 			}
 			.large-pic {
