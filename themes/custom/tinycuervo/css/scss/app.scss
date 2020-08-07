@@ -650,6 +650,11 @@ a {
 			width: 7em;
 			height: 4em;
 		}
+		.bpi-logo-qrcode {
+			background: url(../images/BPIQR_Ladybagmnl.jpg) no-repeat center;
+			width: 12.5em;
+			height: 23.625em;
+		}
 		.gcash-logo {
 			background: url(../images/gcash.jpg) no-repeat center;
 			width: 9em;
@@ -1540,6 +1545,7 @@ a {
 	.views-field-price__number {
 		font-size: .75em;
 		color: $color-gray;
+		margin-bottom: 2em;
 		strong {
 			color: $color-charcoal;
 		}
